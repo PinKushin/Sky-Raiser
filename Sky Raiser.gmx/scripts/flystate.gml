@@ -1,8 +1,8 @@
 ///flystate()
 
 ///vertical movement
-vspd = argument0;
-grav (gravmodifier = 2)
+vspd = -2;
+
 if jumprelease {state = glidestate;}
 
 ///horizontal movement

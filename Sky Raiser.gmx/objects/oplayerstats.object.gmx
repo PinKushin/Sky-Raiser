@@ -66,11 +66,16 @@ switch room {
        case rcredits:;
        break;
        default:
-               draw_text(64, 128, "Health: " + string(oplayerstats.hp));
-               draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));
-               time += 1; ///add to timer
-               ///draw timer
-               draw_text(view_wview[view_current] / 2, 64, "Time: " + string(floor(time / room_speed)));
+            ///debg
+            draw_text(x,view_hview[0] - 20,"vspd " + string(oplayer.vspd))
+            draw_text(x,view_hview[0] - 40,string(oplayer.disablehormov))
+            
+            ///draw stats
+            draw_text(64, 128, "Health: " + string(oplayerstats.hp));
+            draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));
+            time += 1; ///add to timer
+            ///draw timer
+            draw_text(view_wview[view_current] / 2, 64, "Time: " + string(floor(time / room_speed)));
        break;
 }
 </string>
@@ -100,11 +105,7 @@ if DEBUG = true{
    draw_self()
 }
 
-draw_self() draw_text(x,oplayer.y-20,string(oplayer.vspd))
-draw_self() draw_text(x,oplayer.y-10,string(oplayer.state))
-draw_self() draw_text(x,oplayer.y,string(oplayer.disablehormov))
-draw_self() draw_text(x,oplayer.y-30,"gravmodifier" + string(oplayer.gravmodifier))
-draw_self() draw_text(x,oplayer.y-40,"timetomodifygrav" + string(oplayer.timetomodifygrav))
+
 </string>
           </argument>
         </arguments>

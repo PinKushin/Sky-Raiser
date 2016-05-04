@@ -1,13 +1,5 @@
 ///glidestate()
-gravmodifier = 0.08
-grav(gravmodifier);
-
-
-
-///falling
-if up {
-}else{timetomodifygrav += 1 /room_speed  //to gradually increase gravity the longer you are in the are
-}
+vspd = 2;
 
 ///horizontal movement
 if right || left {
@@ -19,7 +11,10 @@ if right || left {
       hspd = 0;
 }
 
-if jump {vspd = (jumpheight / 2) ; state = flystate(vspd);}
+///go to fly state
+if jump {
+   state = flystate;
+}
 
 ///on ground
 grounded();

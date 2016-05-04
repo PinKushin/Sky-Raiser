@@ -13,6 +13,11 @@ if !disablehormov{
       if !instance_exists (owalkdust) {
          instance_create(x, y - 8, owalkdust);
       }
+      
+      //create step sound
+      if !audio_is_playing(astep) && image_index >=2 && image_index < 3 || !audio_is_playing(astep) && image_index >= 6 && image_index < 7 {
+         audio_play_sound(astep,1,false);
+      }
    }else{
       hspd = 0;
       }
@@ -26,21 +31,18 @@ if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
          oplayerstats.stamina = oplayerstats.maxstamina;
       } 
 }
-
 ///player is in the air
 
 if !place_meeting(x, y + 1, osolidpar) {
    
-   if jumpheld {state = glidestate;} //if player holds up, enter glide state
-   timetomodifygrav += 1 /room_speed  //to gradually increase gravity the longer you are in the are
-   gravmodifier = 0.4
-   grav(gravmodifier)
-   if disablehormov {script_execute(enablehormov,vspd)}
+   grav(0.5)
+   if disablehormov {script_execute(enablehormov)}
    heldtime = 0;
    ///control jump sprite
    sprite_index = splayerjump;
    image_speed = 0;
    image_index = (vspd > 0);
+   
    if hspd !=0 {
       image_xscale = sign(hspd);
    }
@@ -53,13 +55,9 @@ if !place_meeting(x, y + 1, osolidpar) {
    ///fly
    if jump {
       prevhspd = hspddir * hspd; //make positive
-      state = flystate(vspd = -2);
+      state = flystate;
    }
    
-   ///control jump height
-   if jumprelease && vspd < (jumpheight / 2) {
-      vspd = (jumpheight / 2);
-   }
 }else{ ///player on the ground
       vspd = 0;
       ///jump
@@ -88,7 +86,7 @@ if !place_meeting(x, y + 1, osolidpar) {
       }else if jumprelease && hspd == 0 && heldtime >= room_speed / 2 { ///hold time check
             ///heavy jump
             image_speed = 0.75;
-            vspd = jumpheight * 1.5;
+            vspd = jumpheight * 5;
             
             
             ///create dust
@@ -105,14 +103,12 @@ if !place_meeting(x, y + 1, osolidpar) {
          spriteanimate(splayeridle, 0.1);
       }else if !jumpheld {
             spriteanimate(splayerwalk, 0.2);
-            if image_index = 2 or image_index = 5 and !audio_is_playing(astep) {audio_play_sound(astep,1,false)}
       }
 }
+
 if hspd != 0 {heldtime = 0;}
 
 ///move
 move(osolidpar);
 
-
-/* need to fix moving while holding jump or 
-at the very least make the sprite change directions if you move */
+///still need to fix moonwalk
