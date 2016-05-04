@@ -25,12 +25,16 @@
       <script>scripts\movestate.gml</script>
       <script>scripts\sprintstate.gml</script>
       <script>scripts\flystate.gml</script>
+      <script>scripts\tiredstate.gml</script>
+      <script>scripts\glidestate.gml</script>
     </scripts>
     <scripts name="helper">
       <script>scripts\move.gml</script>
       <script>scripts\getinput.gml</script>
+      <script>scripts\grav.gml</script>
+      <script>scripts\grounded.gml</script>
+      <script>scripts\spriteanimate.gml</script>
     </scripts>
-    <script>scripts\scrYCollisionFall.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="player">
@@ -41,7 +45,6 @@
       <object>objects\oenemypar</object>
       <object>objects\osolidpar</object>
     </objects>
-    <object>objects\oPlayer0</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rtest</room>

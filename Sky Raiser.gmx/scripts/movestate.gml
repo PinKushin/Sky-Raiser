@@ -1,12 +1,7 @@
 ///movestate()
 
-///sprint vulnerability
-if oplayerstats.stamina < 1 {
-   alarm[TIRED] = room_speed
-}
-
 ///horizontal movement
-if right && alarm[TIRED] <= 0 || left && alarm[TIRED] <= 0 {
+if right || left {
    hspd += hspddir * acc;
    
    if hspd > spd{hspd = spd;}
@@ -20,16 +15,17 @@ if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
    state = sprintstate;
 }else{
       oplayerstats.stamina += 1;
-      if oplayerstats.stamina > oplayerstats.maxstamina{
+      if oplayerstats.stamina > oplayerstats.maxstamina {
          oplayerstats.stamina = oplayerstats.maxstamina;
       } 
 }
 
 ///player is in the air
-if !place_meeting(x, y + 1, osolidpar){
-   vspd += grav;
+if !place_meeting(x, y + 1, osolidpar) {
+   vspd += 1
    
    if jump {
+      prevspd = hspddir * hspd; //make positive
       state = flystate;
    }
    
@@ -40,17 +36,15 @@ if !place_meeting(x, y + 1, osolidpar){
 }else{ ///player on the ground
       vspd = 0;
       ///jump
-      if jump && alarm[TIRED] <= 0 {
-         vspd = -12;
+      if jump {
+         vspd = -10;
          audio_play_sound(ajump, 5, false);
       }
 }
 
 
 ///control sprite
-if hspd != 0 {
-   image_xscale = sign(hspd);
-}
+spriteanimate(0);
 
 move(osolidpar);
 

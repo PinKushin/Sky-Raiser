@@ -1,26 +1,17 @@
 ///flystate()
-///grav = 0;
-if !place_meeting(x, y + 1, osolidpar){
-   if down || up && oplayerstats.stamina > flycost {
-        vspd += vspddir * acc;
-        
-        if vspd > spd {vspd = spd;}
-        if vspd < - spd {vspd = -spd;}
-   }else{
-         vspd = 0;
-   }
+
+///vertical movement
+vspd = -2;
+if jumprelease {state = glidestate;}
+
+///horizontal movement
+if right || left {
+   hspd = hspddir * prevspd;
    
-   if right || left {
-      hspd += hspddir * acc;
-      
-      if hspd > spd {hspd = spd;}
-      if hspd < - spd {hspd = -spd;}
-   }else{
-         hspd = 0;
-   }
-}
-if place_meeting(x, y + 1, osolidpar) {
-   state = movestate;
+   if hspd > prevspd {hspd = prevspd;}
+   if hspd < -prevspd {hspd = -prevspd;}
+}else{
+      hspd = 0;
 }
 
 ///animate sprite

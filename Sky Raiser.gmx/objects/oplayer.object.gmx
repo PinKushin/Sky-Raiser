@@ -30,9 +30,8 @@ spd = 300 / room_speed;
 acc =  100 / room_speed;
 hspd = 0;
 vspd = 0;
-grav = 1;
-maxgrav = 12;
 flycost = 5;
+
 state = movestate;
 getinput();
 </string>
@@ -58,6 +57,7 @@ getinput();
           <argument>
             <kind>1</kind>
             <string>///tired alarm
+state = movestate;
 </string>
           </argument>
         </arguments>
@@ -84,6 +84,7 @@ getinput();
 getinput();
 script_execute(state);
 
+show_debug_message(hspd);
 </string>
           </argument>
         </arguments>
