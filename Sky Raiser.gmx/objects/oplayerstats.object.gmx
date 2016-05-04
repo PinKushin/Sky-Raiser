@@ -66,10 +66,6 @@ switch room {
        case rcredits:;
        break;
        default:
-            ///debg
-            draw_text(x,view_hview[0] - 20,"vspd " + string(oplayer.vspd))
-            draw_text(x,view_hview[0] - 40,string(oplayer.disablehormov))
-            
             ///draw stats
             draw_text(64, 128, "Health: " + string(oplayerstats.hp));
             draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));

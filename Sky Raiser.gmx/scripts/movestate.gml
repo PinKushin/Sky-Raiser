@@ -1,6 +1,5 @@
 ///movestate()
 
-
 ///horizontal movement
 if !disablehormov{
    if right || left {
@@ -114,5 +113,3 @@ if hspd != 0 {heldtime = 0;}
 
 ///move
 move(osolidpar);
-
-///still need to fix moonwalk
