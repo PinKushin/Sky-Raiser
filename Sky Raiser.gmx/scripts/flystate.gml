@@ -6,10 +6,19 @@ if jumprelease {state = glidestate;}
 
 ///horizontal movement
 if right || left {
-   hspd = hspddir * prevspd;
+   if prevspd !=0 {
+      hspd = hspddir * prevspd;
+      
+      if hspd > prevspd {hspd = prevspd;}
+      if hspd < -prevspd {hspd = -prevspd;}
+   }else{
+         hspd += hspddir * acc
+         
+         if hspd > spd {hspd = spd;}
+         if hspd < -spd {hspd = -spd;}
+   }
    
-   if hspd > prevspd {hspd = prevspd;}
-   if hspd < -prevspd {hspd = -prevspd;}
+   
 }else{
       hspd = 0;
 }

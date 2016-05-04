@@ -61,6 +61,10 @@ besttime = 0;
             <kind>1</kind>
             <string>///draw player stats
 switch room {
+       case rmenu:
+       break;
+       case rcredits:;
+       break;
        default:
                draw_text(64, 128, "Health: " + string(oplayerstats.hp));
                draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));

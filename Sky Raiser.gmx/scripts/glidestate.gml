@@ -7,8 +7,8 @@ grav(0.1);
 if right || left {
    hspd = hspddir * spd;
    
-   if hspd > spd{hspd = spd;}
-   if hspd < -spd{hspd = -spd;}
+   if hspd > spd {hspd = spd;}
+   if hspd < -spd {hspd = -spd;}
 }else{
       hspd = 0;
 }

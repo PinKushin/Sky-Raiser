@@ -9,7 +9,7 @@
   <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
-  <showcolour>-1</showcolour>
+  <showcolour>0</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="btest" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="oplayer" xview="0" yview="0" wview="512" hview="288" xport="0" yport="0" wport="1280" hport="720" hborder="800" vborder="600" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="oplayer" xview="0" yview="0" wview="512" hview="288" xport="0" yport="0" wport="1280" hport="720" hborder="512" vborder="288" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -51,130 +51,20 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="oplayer" x="160" y="288" name="inst_79382B9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="128" y="320" name="inst_075D1032" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="160" y="320" name="inst_490D5C6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="192" y="320" name="inst_C18129CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="256" y="320" name="inst_51DCDB76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="224" y="320" name="inst_48A6A515" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="288" y="320" name="inst_EE8FC8F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="320" y="320" name="inst_881029F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="352" y="320" name="inst_E4A35B26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="384" y="320" name="inst_28B1FFEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="448" y="320" name="inst_80440D95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="416" y="320" name="inst_558D3D74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="480" y="320" name="inst_AABD3503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="512" y="320" name="inst_C88225F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="544" y="320" name="inst_A21E23EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oworm" x="480" y="288" name="inst_7ECBB0BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="0" name="inst_46B2A56F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="32" y="0" name="inst_59FD6F3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="64" y="0" name="inst_44519227" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="96" y="0" name="inst_5FADB6B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="128" y="0" name="inst_EB038B52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="160" y="0" name="inst_FF192523" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="192" y="0" name="inst_EA0A5104" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="224" y="0" name="inst_9D6DFAE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="256" y="0" name="inst_5A044568" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="288" y="0" name="inst_37FDC1E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="320" y="0" name="inst_37EB0FC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="352" y="0" name="inst_03FEFA55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="384" y="0" name="inst_FBCC3A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="416" y="0" name="inst_BCD4A7C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="448" y="0" name="inst_D0C22ACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="480" y="0" name="inst_CC428BE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="512" y="0" name="inst_457FE762" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="544" y="0" name="inst_45F3FF5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="576" y="0" name="inst_EA5A5C26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="608" y="0" name="inst_7ABA656A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="640" y="0" name="inst_DA4E953E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="672" y="0" name="inst_EC35F9CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="704" y="0" name="inst_5F1B607B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="736" y="0" name="inst_9C167F1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="768" y="0" name="inst_668A71E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="800" y="0" name="inst_26288F55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="832" y="0" name="inst_F068607B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="864" y="0" name="inst_CA99F6DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="896" y="0" name="inst_C4001834" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="928" y="0" name="inst_3BD33E5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="960" y="0" name="inst_0FBF9DA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="0" name="inst_5F1F83AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="32" name="inst_805A3658" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="64" name="inst_B8B19221" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="96" name="inst_8F8031A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="128" name="inst_B16A5743" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="160" name="inst_04F358E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="192" name="inst_2BA0898D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="224" name="inst_36D8F36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="256" name="inst_66C4C4FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="288" name="inst_1933BC1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="320" name="inst_315EC2AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="352" name="inst_B48C77E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="384" name="inst_9177B5A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="416" name="inst_39DE5AF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="448" name="inst_E397A9D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="480" name="inst_C94C61C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="512" name="inst_5FAA13C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="544" name="inst_4C63850A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="576" name="inst_48E05FAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="608" name="inst_EE6FAB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="640" name="inst_0FA16EF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="672" name="inst_5C069522" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="704" name="inst_2E9979CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="992" y="736" name="inst_1896A13F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="960" y="736" name="inst_E53A1AC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="928" y="736" name="inst_8F2F604F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="896" y="736" name="inst_152C0478" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="864" y="736" name="inst_959CA507" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="832" y="736" name="inst_DD5FEAEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="800" y="736" name="inst_42FC4527" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="768" y="736" name="inst_3547A50D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="736" y="736" name="inst_9150A1D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="704" y="736" name="inst_3E90CC5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="672" y="736" name="inst_F159B51C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="640" y="736" name="inst_45BB793B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="608" y="736" name="inst_11575EAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="576" y="736" name="inst_36270307" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="544" y="736" name="inst_4E142722" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="512" y="736" name="inst_C536A9DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="384" y="736" name="inst_41267D08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="352" y="736" name="inst_DB302A7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="320" y="736" name="inst_1D24E35A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="288" y="736" name="inst_A6B8F12C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="256" y="736" name="inst_171D0B7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="224" y="736" name="inst_88656A58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="192" y="736" name="inst_39C3506E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="160" y="736" name="inst_83DFF2E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="128" y="736" name="inst_7AA67040" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="96" y="736" name="inst_3DD27AA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="64" y="736" name="inst_9EBA3D31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="704" name="inst_983B5507" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="736" name="inst_89325FD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="32" y="736" name="inst_482C4338" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="480" y="736" name="inst_04137A3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="448" y="736" name="inst_17C536AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="416" y="736" name="inst_F3FE94F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="672" name="inst_F0DC43EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="640" name="inst_1E30BBED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="608" name="inst_F94F1F06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="576" name="inst_5AE91B94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="544" name="inst_DCA932C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="512" name="inst_FFDF088E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="480" name="inst_B8EA2B42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="448" name="inst_A146C25F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="416" name="inst_4C4393DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="384" name="inst_BD430DFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="352" name="inst_1B79957F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="320" name="inst_2500D764" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="288" name="inst_01CA472A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="256" name="inst_61E80E24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="224" name="inst_9D0F5C67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="192" name="inst_56792F1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="160" name="inst_D162692C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="128" name="inst_2450128E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="96" name="inst_1767D4A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="64" name="inst_DE869CEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="0" y="32" name="inst_D6435529" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="509" y="712" name="inst_FB68110A" locked="0" code="" scaleX="4.125" scaleY="0.6875" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="784" y="605" name="inst_38AAF844" locked="0" code="" scaleX="4.87096786499023" scaleY="0.629999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="973" y="735" name="inst_F272F03A" locked="0" code="" scaleX="1.64999997615814" scaleY="0.625" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="790" y="321" name="inst_3AC86977" locked="0" code="" scaleX="7.34375" scaleY="2.71875" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="869" y="224" name="inst_402210CD" locked="0" code="" scaleX="4.84000015258789" scaleY="0.9375" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="333" y="94" name="inst_32A4B8B4" locked="0" code="" scaleX="4.875" scaleY="0.74193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="510" y="71" name="inst_F9886477" locked="0" code="" scaleX="4.06451606750488" scaleY="0.74193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="229" y="225" name="inst_D1DB1263" locked="0" code="" scaleX="7.87096786499023" scaleY="0.935483872890472" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="150" y="323" name="inst_759D4BEC" locked="0" code="" scaleX="7.87096786499023" scaleY="2.5806450843811" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="469" y="511" name="inst_6683F2BE" locked="0" code="" scaleX="4.90322589874268" scaleY="0.645161271095276" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="143" y="605" name="inst_15CDDAF8" locked="0" code="" scaleX="4.90625" scaleY="0.5625" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="971" y="96" name="inst_69BEA379" locked="0" code="" scaleX="1.70967745780945" scaleY="0.612903237342834" colour="4294967295" rotation="0"/>
+    <instance objName="oplayer" x="307" y="194" name="inst_134ED678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="332" y="735" name="inst_FEF63744" locked="0" code="" scaleX="4.90625" scaleY="0.612903237342834" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

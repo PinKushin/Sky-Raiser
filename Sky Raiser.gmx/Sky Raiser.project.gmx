@@ -16,6 +16,9 @@
     <sprites name="player">
       <sprite>sprites\splayerwalk</sprite>
       <sprite>sprites\splayeridle</sprite>
+      <sprite>sprites\splayermask</sprite>
+      <sprite>sprites\splayerheavyjump</sprite>
+      <sprite>sprites\splayerjump</sprite>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
@@ -28,8 +31,14 @@
       <sprite>sprites\splayerstats</sprite>
       <sprite>sprites\senemy</sprite>
     </sprites>
+    <sprites name="particles">
+      <sprite>sprites\sdust</sprite>
+      <sprite>sprites\sdustwalk</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\btest</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="player states">
@@ -66,13 +75,20 @@
     </objects>
     <objects name="game">
       <object>objects\omusic</object>
+      <object>objects\ocredits</object>
+      <object>objects\ofont</object>
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>
     </objects>
+    <objects name="particles">
+      <object>objects\ojumpdust</object>
+      <object>objects\owalkdust</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmenu</room>
+    <room>rooms\rcredits</room>
     <room>rooms\rtest</room>
   </rooms>
   <help>
