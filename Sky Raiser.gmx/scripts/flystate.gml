@@ -14,10 +14,8 @@ if right || left {
       hspd = 0;
 }
 
-///animate sprite
-if hspd != 0 {
-   image_xscale = sign(hspd);
-}
+///control sprite
+spriteanimate(0);
 
 ///move
 move(osolidpar);

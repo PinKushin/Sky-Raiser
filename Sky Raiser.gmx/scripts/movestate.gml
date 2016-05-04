@@ -44,7 +44,7 @@ if !place_meeting(x, y + 1, osolidpar) {
 
 
 ///control sprite
-spriteanimate(0);
+spriteanimate(0.3);
 
 move(osolidpar);
 
