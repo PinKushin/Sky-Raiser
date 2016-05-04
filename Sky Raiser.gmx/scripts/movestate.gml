@@ -20,8 +20,9 @@ if !disablehormov{
       }
    }else{
       hspd = 0;
-      }
    }
+}
+
 ///sprint
 if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
    state = sprintstate;
@@ -31,13 +32,14 @@ if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
          oplayerstats.stamina = oplayerstats.maxstamina;
       } 
 }
-///player is in the air
 
+///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
    
    grav(0.5)
    if disablehormov {script_execute(enablehormov)}
    heldtime = 0;
+   
    ///control jump sprite
    sprite_index = splayerjump;
    image_speed = 0;
@@ -77,6 +79,7 @@ if !place_meeting(x, y + 1, osolidpar) {
                 image_speed = 0.2;
                 disablehormov = 1;
                 
+                ///stop the crouch animation
                 if image_index >= 3 {
                    image_index = 3;
                    image_speed = 0;
@@ -99,6 +102,11 @@ if !place_meeting(x, y + 1, osolidpar) {
          spriteanimate(splayeridle, 0.1);
       }else if !jumpheld {
             spriteanimate(splayerwalk, 0.2);
+      }
+      
+      ///moonwalk fix
+      if hspd != 0 {
+         image_xscale = sign(hspd);
       }
 }
 
