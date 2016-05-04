@@ -4,8 +4,8 @@
 if right || left {
    hspd += hspddir * acc;
    
-   if hspd > spd{hspd = spd;}
-   if hspd < -spd{hspd = -spd;}
+   if hspd > spd {hspd = spd;}
+   if hspd < -spd {hspd = -spd;}
    ///control sprite
    spriteanimate(splayerwalk, 0.3);
 }else{
