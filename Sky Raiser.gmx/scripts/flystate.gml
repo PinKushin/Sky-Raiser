@@ -1,16 +1,17 @@
 ///flystate()
 
 ///vertical movement
-vspd = -2;
+vspd = argument0;
+grav (gravmodifier = 2)
 if jumprelease {state = glidestate;}
 
 ///horizontal movement
 if right || left {
-   if prevspd !=0 {
-      hspd = hspddir * prevspd;
+   if prevhspd !=0 {
+      hspd = hspddir * prevhspd;
       
-      if hspd > prevspd {hspd = prevspd;}
-      if hspd < -prevspd {hspd = -prevspd;}
+      if hspd > prevhspd {hspd = prevhspd;}
+      if hspd < -prevhspd {hspd = -prevhspd;}
    }else{
          hspd += hspddir * acc
          

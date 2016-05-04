@@ -1,12 +1,12 @@
 ///sprintstate()
 
 hspd += hspddir * acc;
-if hspd > (spd * 1.5) {hspd = spd * 1.5}
-if hspd < -(spd * 1.5) {hspd = -(spd * 1.5)}
+if hspd > (spd * 1.5) {hspd = spd * 1.4}
+if hspd < -(spd * 1.5) {hspd = -(spd * 1.4)}
 
 ///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
-   grav(1);
+   grav(.1);
    
    ///control jump sprite
    sprite_index = splayerjump;
@@ -38,7 +38,7 @@ if !place_meeting(x, y + 1, osolidpar) {
          spriteanimate(splayeridle, 0.1);
       }else{
             spriteanimate(splayerwalk, 0.6);
-            oplayerstats.stamina -= 2;
+            oplayerstats.stamina -= .5;
       }
 }
 

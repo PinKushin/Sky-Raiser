@@ -10,6 +10,7 @@
     </sounds>
     <sounds name="sfx">
       <sound>sound\ajump</sound>
+      <sound>sound\astep</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -47,6 +48,7 @@
       <script>scripts\flystate.gml</script>
       <script>scripts\tiredstate.gml</script>
       <script>scripts\glidestate.gml</script>
+      <script>scripts\enablehormov.gml</script>
     </scripts>
     <scripts name="helper">
       <script>scripts\move.gml</script>
@@ -88,8 +90,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmenu</room>
-    <room>rooms\rcredits</room>
     <room>rooms\rtest</room>
+    <room>rooms\rcredits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

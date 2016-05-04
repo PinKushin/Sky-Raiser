@@ -99,6 +99,12 @@ switch room {
 if DEBUG = true{
    draw_self()
 }
+
+draw_self() draw_text(x,oplayer.y-20,string(oplayer.vspd))
+draw_self() draw_text(x,oplayer.y-10,string(oplayer.state))
+draw_self() draw_text(x,oplayer.y,string(oplayer.disablehormov))
+draw_self() draw_text(x,oplayer.y-30,"gravmodifier" + string(oplayer.gravmodifier))
+draw_self() draw_text(x,oplayer.y-40,"timetomodifygrav" + string(oplayer.timetomodifygrav))
 </string>
           </argument>
         </arguments>
