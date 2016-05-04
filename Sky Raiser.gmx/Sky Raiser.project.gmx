@@ -14,7 +14,8 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="player">
-      <sprite>sprites\splayer</sprite>
+      <sprite>sprites\splayerwalk</sprite>
+      <sprite>sprites\splayeridle</sprite>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
@@ -48,7 +49,7 @@
       </scripts>
     </scripts>
     <scripts name="enemy states">
-      <scripts name="snake">
+      <scripts name="worm">
         <script>scripts\moveleft.gml</script>
         <script>scripts\moveright.gml</script>
       </scripts>
@@ -67,7 +68,7 @@
       <object>objects\omusic</object>
     </objects>
     <objects name="enemys">
-      <object>objects\osnake</object>
+      <object>objects\oworm</object>
     </objects>
   </objects>
   <rooms name="rooms">

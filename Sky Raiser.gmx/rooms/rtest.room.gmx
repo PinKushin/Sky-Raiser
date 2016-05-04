@@ -70,7 +70,7 @@
     <instance objName="osolidpar" x="480" y="320" name="inst_AABD3503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="512" y="320" name="inst_C88225F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="544" y="320" name="inst_A21E23EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osnake" x="480" y="288" name="inst_7ECBB0BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oworm" x="480" y="288" name="inst_7ECBB0BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

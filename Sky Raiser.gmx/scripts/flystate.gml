@@ -15,7 +15,7 @@ if right || left {
 }
 
 ///control sprite
-spriteanimate(0);
+spriteanimate(splayerwalk, 0.3);
 
 ///move
 move(osolidpar);

@@ -35,7 +35,7 @@ if oplayerstats.stamina <= 0 {
 }
 
 ///control sprite
-spriteanimate(0.6);
+spriteanimate(splayerwalk, 0.6);
 
 ///move
 move(osolidpar);

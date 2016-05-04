@@ -6,8 +6,11 @@ if right || left {
    
    if hspd > spd{hspd = spd;}
    if hspd < -spd{hspd = -spd;}
+   ///control sprite
+   spriteanimate(splayerwalk, 0.3);
 }else{
       hspd = 0;
+      spriteanimate(splayeridle, 0.1);
 }
 
 ///sprint
@@ -42,9 +45,6 @@ if !place_meeting(x, y + 1, osolidpar) {
       }
 }
 
-
-///control sprite
-spriteanimate(0.3);
-
+///move
 move(osolidpar);
 

@@ -4,6 +4,6 @@ if alarm [TIRED] <= 0 {
 }
 
 ///control sprite
-spriteanimate(0);
+spriteanimate(splayeridle, 0.1);
 
 

@@ -19,7 +19,7 @@ if jump {state = flystate;}
 grounded();
 
 ///control sprite
-spriteanimate(0);
+spriteanimate(splayerwalk, 0.3);
 
 ///move
 move(osolidpar);
