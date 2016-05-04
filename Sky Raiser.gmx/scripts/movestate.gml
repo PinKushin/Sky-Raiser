@@ -75,27 +75,23 @@ if !place_meeting(x, y + 1, osolidpar) {
                 ///animate the crouch
                 sprite_index = splayerheavyjump;
                 image_speed = 0.2;
-                
+                disablehormov = 1;
                 
                 if image_index >= 3 {
-                   disablehormov = 1;
                    image_index = 3;
                    image_speed = 0;
-                }
+                } 
             }
       }else if jumprelease && hspd == 0 && heldtime >= room_speed / 2 { ///hold time check
             ///heavy jump
             image_speed = 0.75;
-            vspd = jumpheight * 5;
-            
+            vspd = jumpheight * 1.5;
             
             ///create dust
             repeat (irandom_range(6, 10)) {
                    var dust = instance_create (x, y + 16, ojumpdust);
                    dust.speed = random_range(4, 8);
             }
-            
-            state = flystate(vspd);
       }
       
       ///control walking sprite
