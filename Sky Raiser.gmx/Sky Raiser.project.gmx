@@ -20,6 +20,7 @@
       <sprite>sprites\splayerjump</sprite>
       <sprite>sprites\splayermask</sprite>
       <sprite>sprites\splayerwalk</sprite>
+      <sprite>sprites\splayerlightgroundattack</sprite>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
@@ -35,6 +36,9 @@
     <sprites name="particles">
       <sprite>sprites\sdust</sprite>
       <sprite>sprites\sdustwalk</sprite>
+    </sprites>
+    <sprites name="items">
+      <sprite>sprites\ssoul</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -87,7 +91,13 @@
       <object>objects\ojumpdust</object>
       <object>objects\owalkdust</object>
     </objects>
+    <objects name="items">
+      <object>objects\osoul</object>
+    </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tlsoul</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rmenu</room>
     <room>rooms\rtest</room>
