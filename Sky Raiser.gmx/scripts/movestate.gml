@@ -21,6 +21,12 @@ if !disablehormov{
       hspd = 0;
    }
 }
+///action button
+
+if action {state = lightgroundattack
+
+}
+
 
 ///sprint
 if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {

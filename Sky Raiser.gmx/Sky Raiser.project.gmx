@@ -57,6 +57,7 @@
       <script>scripts\glidestate.gml</script>
       <script>scripts\tiredstate.gml</script>
       <script>scripts\ledgegrabstate.gml</script>
+      <script>scripts\lightgroundattack.gml</script>
     </scripts>
     <scripts name="helper">
       <script>scripts\move.gml</script>
