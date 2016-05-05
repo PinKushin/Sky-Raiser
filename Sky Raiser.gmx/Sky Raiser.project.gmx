@@ -32,6 +32,7 @@
       <sprite>sprites\smusic</sprite>
       <sprite>sprites\splayerstats</sprite>
       <sprite>sprites\senemy</sprite>
+      <sprite>sprites\sbackground</sprite>
     </sprites>
     <sprites name="particles">
       <sprite>sprites\sdust</sprite>
@@ -42,7 +43,10 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\btest</background>
+    <background>background\bsky</background>
+    <background>background\bcloudfar</background>
+    <background>background\bcloudclose</background>
+    <background>background\blandscape</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -86,6 +90,7 @@
       <object>objects\ofont</object>
       <object>objects\osoulcredits</object>
       <object>objects\omenu</object>
+      <object>objects\obackground</object>
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>
