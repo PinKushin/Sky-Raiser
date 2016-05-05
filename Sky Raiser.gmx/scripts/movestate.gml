@@ -109,6 +109,7 @@ if !place_meeting(x, y + 1, osolidpar) {
       }
 }
 
+
 if hspd != 0 {heldtime = 0;}
 
 ///move

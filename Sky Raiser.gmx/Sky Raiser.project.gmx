@@ -52,6 +52,7 @@
       <script>scripts\flystate.gml</script>
       <script>scripts\glidestate.gml</script>
       <script>scripts\tiredstate.gml</script>
+      <script>scripts\ledgegrabstate.gml</script>
     </scripts>
     <scripts name="helper">
       <script>scripts\move.gml</script>
@@ -83,6 +84,8 @@
       <object>objects\omusic</object>
       <object>objects\ocredits</object>
       <object>objects\ofont</object>
+      <object>objects\osoulcredits</object>
+      <object>objects\omenu</object>
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>
@@ -97,6 +100,7 @@
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tlsoul</timeline>
+    <timeline>timelines\tlsoulcredits</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\rmenu</room>

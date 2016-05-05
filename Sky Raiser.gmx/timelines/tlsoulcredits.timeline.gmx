@@ -19,8 +19,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///move up
-vspd = -spd
+            <string>///move right
+hspd *= -1
 </string>
           </argument>
         </arguments>
@@ -28,7 +28,7 @@ vspd = -spd
     </event>
   </entry>
   <entry>
-    <step>60</step>
+    <step>30</step>
     <event>
       <action>
         <libid>1</libid>
@@ -46,8 +46,8 @@ vspd = -spd
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///move down
-vspd = spd
+            <string>///move left
+hspd *= -1
 </string>
           </argument>
         </arguments>
@@ -55,7 +55,7 @@ vspd = spd
     </event>
   </entry>
   <entry>
-    <step>120</step>
+    <step>60</step>
     <event>
       <action>
         <libid>1</libid>

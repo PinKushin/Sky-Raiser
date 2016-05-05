@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>///initialise credits
 spd = 2
+
+///create souls
+for (i = 0; i &lt; oplayerstats.souls; i++) {
+    instance_create(ocredits.x, ocredits.y + (i * 20) + 32, osoulcredits); 
+}
+
 </string>
           </argument>
         </arguments>
@@ -49,7 +55,7 @@ spd = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///control credits scrolling
+            <string>///control credits scrolling and create souls following
 y -= spd
 </string>
           </argument>
@@ -75,6 +81,9 @@ y -= spd
             <kind>1</kind>
             <string>///go back to menu
 if y &lt; 0 {
+   if instance_exists(oplayerstats){ 
+      with oplayerstats {instance_destroy();}
+   }
    room_goto(rmenu);
 }
 
@@ -112,16 +121,18 @@ draw_text(room_width / 2, room_height - (view_hview[view_current] / 2), "Sky Rai
 ///credits
 //draw_set_font(global.font);
 draw_set_halign(fa_left);
-draw_text(32, 800, "Story Design: Craig 'Craigory Ham' Hamilton #Audio Design: Craig 'Craigory Ham' Hamilton #Lead Artist: Craig 'Craigory Ham' Hamilton #Lead Writer: Craig 'Craigory Ham' Hamilton #Lead Developer: John 'PinKushin' Moore #Gameplay Design: John 'PinKushin' Moore");
+draw_text(32, 800, "Story Design: Craig 'Craigory Ham' Hamilton #
+                    Audio Design: Craig 'Craigory Ham' Hamilton #
+                    Lead Artist: Craig 'Craigory Ham' Hamilton #
+                    Lead Writer: Craig 'Craigory Ham' Hamilton #
+                    Lead Developer: John 'PinKushin' Moore #
+                    Gameplay Design: John 'PinKushin' Moore");
 
 
 ///thanking the player
 //draw_set_font(global.titlefont);
 draw_set_halign(fa_center);
 draw_text(room_width / 2, 32, "Thanks for Playing")
-
-
-/* draw souls following sky raiser during the credits */
 </string>
           </argument>
         </arguments>

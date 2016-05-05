@@ -25,12 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25;
+            <string>///initialise soul variables
+image_speed = 0.25;
 image_alpha = 0.7;
+spd = 0.10;
+vspd = 0;
+hspd = 0;
 
-//timeline_index = tlsoul;  not working right for some reason :c
-//timeline_running = true;
-//timeline_loop = true ;
+timeline_index = tlsoul;
+timeline_running = true;
+timeline_loop = true ;
+
 </string>
           </argument>
         </arguments>
@@ -53,10 +58,11 @@ image_alpha = 0.7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///control soul movement
 
 
-y += yspd
+move(osolidpar);
+
 </string>
           </argument>
         </arguments>

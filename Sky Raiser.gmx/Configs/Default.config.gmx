@@ -635,7 +635,7 @@
   </Options>
   <ConfigConstants>
     <constants number="3">
-      <constant name="DEBUG">false</constant>
+      <constant name="DEBUG">true</constant>
       <constant name="TIRED">0</constant>
       <constant name="JUMPED">1</constant>
     </constants>
