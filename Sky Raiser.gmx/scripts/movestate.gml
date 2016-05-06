@@ -49,20 +49,45 @@ if !place_meeting(x, y + 1, osolidpar) {
          sprite_index = splayerheavyjump;
          if image_index > image_number - 1 {
             heavyjumprotations ++; //used to slow speed of rotation down as the player does more rotations, neat idea
-            image_index = 6;    
+            if heavyjumprotations = 0 {
+               grav(-1)
+            }
+            else if heavyjumprotations = 1{
+               grav(-2)
+            }
+            else if heavyjumprotations = 2{
+               grav(-3)
+            }
+            else if heavyjumprotations = 3{
+               grav(-(vspd))
+            }
+            else if heavyjumprotations = 4{ 
+               state = glidestate 
+               }
+            
+            image_index = 6; 
          }
+         if heavyjumprotations = 3 grav(-vspd)
          if heavyjumprotations = 0 {
-            image_speed = 0.75;
+            image_speed = 1;
+            vspd += 0.02                         
          }
          else if heavyjumprotations == 1 {
-            image_speed = 0.50;
+            image_speed -= 0.005;                       
          }
          else if heavyjumprotations == 2 {
-            image_speed = 0.20
+            image_speed -= 0.020
+                                  
          }
          else if heavyjumprotations == 3 {
-            image_speed = 0.10
+            image_speed = 0.20
+                    
          }
+         else if heavyjumprotations == 4 {
+            image_speed = 0.50
+         
+         }
+
          
    }
    
