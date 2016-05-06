@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///initialise credits
 spd = 2
-
+image_speed = 0.2;
 ///create souls
 for (i = 0; i &lt; oplayerstats.souls; i++) {
     instance_create(ocredits.x, ocredits.y + (i * 20) + 32, osoulcredits); 
@@ -55,8 +55,11 @@ for (i = 0; i &lt; oplayerstats.souls; i++) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///control credits scrolling and create souls following
+            <string>///control credits scrolling
 y -= spd
+if image_index &lt; 7 {
+   image_index = 7
+}
 </string>
           </argument>
         </arguments>

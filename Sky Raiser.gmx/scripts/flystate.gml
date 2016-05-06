@@ -1,7 +1,19 @@
 ///flystate()
 
-///vertical movement
-vspd = -2;
+///control sprite
+spriteanimate(splayerfly, 0.3);
+
+///vertical movement previous code was vspd = -2;
+
+///flutter effect
+if image_index >= 0 && image_index < 1 {
+   vspd = -4;
+}else if image_index >= 1 && image_index < 2 {
+      vspd = 0;
+}else if image_index >=2 && image_index != 0 {
+      vspd = 1;
+}
+
 
 if jumprelease {state = glidestate;}
 
@@ -23,9 +35,6 @@ if right || left {
 }else{
       hspd = 0;
 }
-
-///control sprite
-spriteanimate(splayerwalk, 0.3);
 
 ///move
 move(osolidpar);

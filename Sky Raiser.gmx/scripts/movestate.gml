@@ -51,7 +51,7 @@ if !place_meeting(x, y + 1, osolidpar) {
         
         if image_index > image_number - 1 { 
            //used to slow speed of rotation down as the player does more rotations, neat idea
-           image_index = 6;
+           image_index = 7;
            heavyjumprotations ++;
         }
         
