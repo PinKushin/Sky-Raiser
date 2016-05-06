@@ -23,7 +23,8 @@ if !disablehormov{
 }
 ///action button
 
-if action {state = lightgroundattack
+if action {
+   state = lightgroundattack
 
 }
 
@@ -46,9 +47,17 @@ if !place_meeting(x, y + 1, osolidpar) {
    heldtime = 0;
    
    ///control jump sprite
-   sprite_index = splayerjump;
-   image_speed = 0;
-   image_index = (vspd > 0);
+   if jumpstate == "lightjump" {
+       sprite_index = splayerjump;
+       image_speed = 0;
+       image_index = (vspd > 0);
+   }else if jumpstate == "heavyjump" {
+         sprite_index = splayerheavyjump;
+         image_speed = 0.75;
+         if image_index > image_number - 1 {
+            image_index = 6;
+         }
+   }
    
    if hspd !=0 {
       image_xscale = sign(hspd);
@@ -66,9 +75,15 @@ if !place_meeting(x, y + 1, osolidpar) {
    }
    
 }else{ ///player on the ground
+      ///switch back to lightjump to fix falling animation
+      if image_index > 6 {
+         jumpstate = "lightjump"
+      }
+      ///set vspd
       vspd = 0;
       ///jump
       if jumprelease && heldtime <= room_speed / 2 { ///hold time check
+         jumpstate = "lightjump"
          vspd = jumpheight;
          audio_play_sound(ajump, 5, false);
          
@@ -80,6 +95,7 @@ if !place_meeting(x, y + 1, osolidpar) {
             heldtime += 1;
             if heldtime >= room_speed / 2 { ///hold time check
                 ///animate the crouch
+                jumpstate = "heavyjump"
                 sprite_index = splayerheavyjump;
                 image_speed = 0.2;
                 disablehormov = 1;
@@ -92,7 +108,6 @@ if !place_meeting(x, y + 1, osolidpar) {
             }
       }else if jumprelease && hspd == 0 && heldtime >= room_speed / 2 { ///hold time check
             ///heavy jump
-            image_speed = 0.75;
             vspd = jumpheight * 1.5;
             
             ///create dust
