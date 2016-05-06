@@ -246,7 +246,6 @@ if y &gt; room_height || x &gt; room_width || x &lt; 0 {
             <kind>1</kind>
             <string>///player debug draw
 draw_self();
-draw_text(x, y - 32, jumpstate) 
 </string>
           </argument>
         </arguments>
