@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///initialise player
-spd = 120 / room_speed;
+spd = 180 / room_speed;
 prevhspd = 0 
 acc =  40 / room_speed;
 hspd = 0;

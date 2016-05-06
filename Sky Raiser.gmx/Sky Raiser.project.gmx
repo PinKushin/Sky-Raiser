@@ -21,6 +21,10 @@
       <sprite>sprites\splayermask</sprite>
       <sprite>sprites\splayerwalk</sprite>
       <sprite>sprites\splayerlightgroundattack</sprite>
+      <sprites name="splayer_iter3">
+        <sprite>sprites\splayerwalk_iter3</sprite>
+        <sprite>sprites\splayeridle_iter3</sprite>
+      </sprites>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
