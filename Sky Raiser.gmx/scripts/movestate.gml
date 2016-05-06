@@ -45,11 +45,25 @@ if !place_meeting(x, y + 1, osolidpar) {
        image_speed = 0;
        image_index = (vspd > 0);
    }else if jumpstate == "heavyjump" {
+         
          sprite_index = splayerheavyjump;
-         image_speed = 0.75;
          if image_index > image_number - 1 {
-            image_index = 6;
+            heavyjumprotations ++; //used to slow speed of rotation down as the player does more rotations, neat idea
+            image_index = 6;    
          }
+         if heavyjumprotations = 0 {
+            image_speed = 0.75;
+         }
+         else if heavyjumprotations == 1 {
+            image_speed = 0.50;
+         }
+         else if heavyjumprotations == 2 {
+            image_speed = 0.20
+         }
+         else if heavyjumprotations == 3 {
+            image_speed = 0.10
+         }
+         
    }
    
    if hspd !=0 {
@@ -71,6 +85,9 @@ if !place_meeting(x, y + 1, osolidpar) {
       ///switch back to lightjump to fix falling animation
       if image_index > 6 {
          jumpstate = "lightjump"
+         if heavyjumprotations != 0{ //so that the twirls aren't messed up
+            heavyjumprotations = 0
+         }
       }
       ///set vspd
       vspd = 0;
