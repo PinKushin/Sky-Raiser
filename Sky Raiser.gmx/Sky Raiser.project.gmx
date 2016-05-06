@@ -51,6 +51,7 @@
     <background>background\bcloudfar</background>
     <background>background\bcloudclose</background>
     <background>background\blandscape</background>
+    <background>background\bchasmconcept</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -115,6 +116,7 @@
   <rooms name="rooms">
     <room>rooms\rmenu</room>
     <room>rooms\rtest</room>
+    <room>rooms\rmchasm</room>
     <room>rooms\rcredits</room>
   </rooms>
   <help>
