@@ -1,4 +1,5 @@
 ///movestate()
+var hj = jumpheight * 1.5;
 
 ///horizontal movement
 if !disablehormov{
@@ -14,7 +15,8 @@ if !disablehormov{
       }
       
       //create step sound
-      if !audio_is_playing(astep) && image_index >=2 && image_index < 3 || !audio_is_playing(astep) && image_index >= 6 && image_index < 7 {
+      if !audio_is_playing(astep) && image_index >=2 && image_index < 3 && jumpstate != "heavyjump" || 
+         !audio_is_playing(astep) && image_index >= 6 && image_index < 7 && jumpstate != "heavyjump" {
          audio_play_sound(astep,1,false);
       }
    }else{
@@ -45,50 +47,33 @@ if !place_meeting(x, y + 1, osolidpar) {
        image_speed = 0;
        image_index = (vspd > 0);
    }else if jumpstate == "heavyjump" {
-         
-         sprite_index = splayerheavyjump;
-         if image_index > image_number - 1 {
-            heavyjumprotations ++; //used to slow speed of rotation down as the player does more rotations, neat idea
-            if heavyjumprotations = 0 {
-               grav(-1)
-            }
-            else if heavyjumprotations = 1{
-               grav(-2)
-            }
-            else if heavyjumprotations = 2{
-               grav(-3)
-            }
-            else if heavyjumprotations = 3{
-               grav(-(vspd))
-            }
-            else if heavyjumprotations = 4{ 
-               state = glidestate 
-               }
-            
-            image_index = 6; 
-         }
-         if heavyjumprotations = 3 grav(-vspd)
-         if heavyjumprotations = 0 {
-            image_speed = 1;
-            vspd += 0.02                         
-         }
-         else if heavyjumprotations == 1 {
-            image_speed -= 0.005;                       
-         }
-         else if heavyjumprotations == 2 {
-            image_speed -= 0.020
-                                  
-         }
-         else if heavyjumprotations == 3 {
-            image_speed = 0.20
-                    
-         }
-         else if heavyjumprotations == 4 {
-            image_speed = 0.50
-         
-         }
-
-         
+        sprite_index = splayerheavyjump;
+        
+        if image_index > image_number - 1 { 
+           //used to slow speed of rotation down as the player does more rotations, neat idea
+           image_index = 6;
+           heavyjumprotations ++;
+        }
+        
+        if heavyjumprotations == 0 {
+           image_speed = 1;
+           vspd = hj;
+        }
+        else if heavyjumprotations == 1 {
+            image_speed = 0.5;
+            vspd = hj + 10;
+        }
+        else if heavyjumprotations == 2 {
+             image_speed = 0.25; 
+             vspd = hj + 12;
+        }
+        else if heavyjumprotations == 3 {
+             image_speed = 0.125;
+             vspd = hj + 15;
+        }
+        else if heavyjumprotations == 4 {
+             state = glidestate 
+        }         
    }
    
    if hspd !=0 {
@@ -108,7 +93,7 @@ if !place_meeting(x, y + 1, osolidpar) {
    
 }else{ ///player on the ground
       ///switch back to lightjump to fix falling animation
-      if image_index > 6 {
+      if heavyjumprotations > 1 {
          jumpstate = "lightjump"
          if heavyjumprotations != 0{ //so that the twirls aren't messed up
             heavyjumprotations = 0

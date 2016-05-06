@@ -7,7 +7,6 @@ if place_meeting (x + hspd, y, collision_object){
         x += sign (hspd);
     }
     hspd = 0;
-    image_index = 0;
 }
 x += hspd;
 
