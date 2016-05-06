@@ -144,8 +144,6 @@ state = movestate;
             <string>///control states
 getinput();
 script_execute(state);
-
-show_debug_message(heldtime);
 </string>
           </argument>
         </arguments>
@@ -171,6 +169,32 @@ show_debug_message(heldtime);
             <string>///collect the soul
 oplayerstats.souls++
 with other {instance_destroy();}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///switch to movestate
+if state = lightgroundattack {
+   state = movestate;
+}
 </string>
           </argument>
         </arguments>

@@ -1,6 +1,6 @@
 ///glidestate()
-vspd = 2;
 
+vspd = 2;
 ///horizontal movement
 if right || left {
    hspd = hspddir * spd;

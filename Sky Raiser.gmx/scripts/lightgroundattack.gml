@@ -1,10 +1,13 @@
 ///lightgroundattack()
 
-sprite_index = splayerlightgroundattack 
-if image_index >=0 && image_index < 3 {image_speed = 0.3; hspd += 2}
-if image_index >=3 && image_index < 4 {image_speed = 0.5; hspd += 10}
-if image_index >=4 {image_speed = 0.5; hspd += 20}
+image_speed = 0.55;
+hspd += image_xscale * 0.5;
+ 
 
-if image_index = image_number - 1 {
-state = movestate
+//fix wall sticking bug
+if place_meeting(x + hspd, y, osolidpar) {
+   state = movestate;
 }
+
+///move
+move(osolidpar);

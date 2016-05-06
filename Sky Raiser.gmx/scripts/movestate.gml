@@ -21,13 +21,6 @@ if !disablehormov{
       hspd = 0;
    }
 }
-///action button
-
-if action {
-   state = lightgroundattack
-
-}
-
 
 ///sprint
 if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
@@ -117,10 +110,19 @@ if !place_meeting(x, y + 1, osolidpar) {
             }
       }
       
+      ///action button
+      if action && jumpstate = "lightjump" && !jumprelease {
+            sprite_index = splayerlightgroundattack;
+            image_index = 0;
+            state = lightgroundattack
+      }
+
+
+      
       ///control walking sprite
-      if hspd == 0 && !jumpheld {
+      if hspd == 0 && !jumpheld && !action {
          spriteanimate(splayeridle, 0.1);
-      }else if !jumpheld {
+      }else if !jumpheld && !action {
             spriteanimate(splayerwalk, 0.2);
       }
       
