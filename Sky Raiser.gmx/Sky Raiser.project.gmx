@@ -34,6 +34,9 @@
       <sprite>sprites\splayerstats</sprite>
       <sprite>sprites\senemy</sprite>
       <sprite>sprites\sbackground</sprite>
+      <sprite>sprites\scam</sprite>
+      <sprite>sprites\smenu</sprite>
+      <sprite>sprites\sfonts</sprite>
     </sprites>
     <sprites name="particles">
       <sprite>sprites\sdust</sprite>
@@ -93,7 +96,7 @@
       <object>objects\ofont</object>
       <object>objects\osoulcredits</object>
       <object>objects\omenu</object>
-      <object>objects\obackground</object>
+      <object>objects\ocam</object>
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>

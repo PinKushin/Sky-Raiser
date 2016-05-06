@@ -45,6 +45,11 @@ lightjump = 0;
 
 //initialise state
 state = movestate;
+
+///create camera
+if !instance_exists(ocam){
+   instance_create(x, y, ocam);
+}
 </string>
           </argument>
         </arguments>
