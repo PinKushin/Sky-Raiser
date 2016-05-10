@@ -66,15 +66,19 @@ switch room {
        case rcredits:;
        break;
        default:
+            draw_set_color(c_white);
             ///draw stats
             draw_text(64, 128, "Health: " + string(oplayerstats.hp));
             draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));
             draw_text(64, 196, "Souls: " +string(oplayerstats.souls));
-            draw_text(64, 210, "heavyjumprotations: " + string(oplayer.heavyjumprotations));
             time += 1; ///add to timer
             ///draw timer
             draw_text(view_wview[view_current] / 2, 64, "Time: " + string(floor(time / room_speed)));
        break;
+}
+
+if DEBUG == true {
+   draw_text(view_wview[view_current] / 2, view_hview[view_current] - 128, "FPS: " + string(floor(fps_real)));
 }
 </string>
           </argument>

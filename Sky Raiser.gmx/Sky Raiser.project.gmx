@@ -22,6 +22,7 @@
       <sprite>sprites\splayerwalk</sprite>
       <sprite>sprites\splayerlightgroundattack</sprite>
       <sprite>sprites\splayerfly</sprite>
+      <sprite>sprites\splayerledgegrab</sprite>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
@@ -61,7 +62,6 @@
       <script>scripts\flystate.gml</script>
       <script>scripts\glidestate.gml</script>
       <script>scripts\tiredstate.gml</script>
-      <script>scripts\ledgegrabstate.gml</script>
       <script>scripts\lightgroundattack.gml</script>
     </scripts>
     <scripts name="helper">
@@ -73,6 +73,7 @@
         <script>scripts\getinput.gml</script>
         <script>scripts\enablehormov.gml</script>
       </scripts>
+      <script>scripts\codesnippet.gml</script>
     </scripts>
     <scripts name="enemy states">
       <scripts name="worm">

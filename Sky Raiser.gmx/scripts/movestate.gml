@@ -2,7 +2,7 @@
 var hj = jumpheight * 1.5;
 
 ///horizontal movement
-if !disablehormov{
+if !disablehormov {
    if right || left {
       hspd += hspddir * acc;
    
@@ -158,7 +158,6 @@ if !place_meeting(x, y + 1, osolidpar) {
          image_xscale = sign(hspd);
       }
 }
-
 
 if hspd != 0 {heldtime = 0;}
 
