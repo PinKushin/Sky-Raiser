@@ -1,6 +1,9 @@
 ///movestate()
 var hj = jumpheight * 1.5;
 
+
+image_blend = c_white;
+
 ///horizontal movement
 if !disablehormov {
    if right || left {
@@ -15,7 +18,7 @@ if !disablehormov {
       }
       
       //create step sound
-      if !audio_is_playing(astep) && image_index >=2 && image_index < 3 && jumpstate != "heavyjump" || 
+      if !audio_is_playing(astep) && image_index >= 2 && image_index < 3 && jumpstate != "heavyjump" || 
          !audio_is_playing(astep) && image_index >= 6 && image_index < 7 && jumpstate != "heavyjump" {
          audio_play_sound(astep,1,false);
       }
@@ -144,8 +147,6 @@ if !place_meeting(x, y + 1, osolidpar) {
             state = lightgroundattack
       }
 
-
-      
       ///control walking sprite
       if hspd == 0 && !jumpheld && !action {
          spriteanimate(splayeridle, 0.1);

@@ -28,6 +28,17 @@
             <string>///initialise camera
 hspd = 0;
 vspd = 0;
+view_enabled = true;
+view_visible[0] = true;
+view_wview[0] = 512;
+view_hview[0] = 288;
+view_wport[0] = 1280;
+view_hport[0] = 720;
+view_object[0] = ocam;
+view_hborder[0] = 512;
+view_vborder[0] = 288;
+
+
 </string>
           </argument>
         </arguments>
@@ -54,7 +65,7 @@ vspd = 0;
 if instance_exists (oplayer) {
     hspd = (oplayer.x - x) * 0.1;
     vspd = (oplayer.y - y) * 0.06;
-    if oplayer.vspd &gt; 8 {
+    if oplayer.vspd &gt; 8 &amp;&amp; oplayer.state != hurtstate {
        vspd = oplayer.vspd;
     }
 }

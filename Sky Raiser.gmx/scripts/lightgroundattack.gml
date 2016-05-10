@@ -1,5 +1,4 @@
 ///lightgroundattack()
-
 image_speed = 0.55;
 hspd += image_xscale * 0.5;
  

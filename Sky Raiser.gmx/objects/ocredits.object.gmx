@@ -57,8 +57,8 @@ for (i = 0; i &lt; oplayerstats.souls; i++) {
             <kind>1</kind>
             <string>///control credits scrolling
 y -= spd
-if image_index &lt; 7 {
-   image_index = 7
+if image_index &lt; 8 {
+   image_index = 8
 }
 </string>
           </argument>
