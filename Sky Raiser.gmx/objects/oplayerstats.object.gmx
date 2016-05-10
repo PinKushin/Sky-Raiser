@@ -78,7 +78,6 @@ switch room {
 }
 
 if DEBUG == true {
-   draw_text(64, 224, oplayer.vspd);
    draw_text(view_wview[view_current] / 2, view_hview[view_current] - 128, "FPS: " + string(floor(fps_real)));
 }
 </string>
