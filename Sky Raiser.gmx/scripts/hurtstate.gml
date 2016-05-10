@@ -1,7 +1,8 @@
 ///hurtstate()
 image_blend = c_red;
-
+jumpstate = "lightjump"
 grav(1);
+
 if alarm[HURT] <= 0 {
    image_blend = c_white;
    state = movestate;

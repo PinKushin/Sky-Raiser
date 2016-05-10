@@ -182,11 +182,12 @@ if state = lightgroundattack {
         instance_destroy()
    }
 }else{
-      if jumpstate != "heavyjump" &amp;&amp; state != hurtstate {
+      if jumpstate != "heavyjump" &amp;&amp; state != hurtstate ||
+      jumpstate = "heavyjump" &amp;&amp; vspd == 0 {
          vspd = -12;
          hspd = sign(x - other.x) * 2;
          alarm[HURT] = room_speed;
-         oplayerstats.hp -= 0;
+         oplayerstats.hp -= 1;
          state = hurtstate;
       }
 }
