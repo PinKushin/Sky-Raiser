@@ -20,7 +20,9 @@ if !disablehormov {
       //create step sound
       if !audio_is_playing(astep) && image_index >= 2 && image_index < 3 && jumpstate != "heavyjump" || 
          !audio_is_playing(astep) && image_index >= 6 && image_index < 7 && jumpstate != "heavyjump" {
-         audio_play_sound(astep,1,false);
+         audio_emitter_pitch(psfx, random_range(0.8, 1));
+         audio_emitter_gain(psfx, 1);
+         audio_play_sound_on(psfx, astep, false, 6);
       }
    }else{
       hspd = 0;
@@ -108,7 +110,9 @@ if !place_meeting(x, y + 1, osolidpar) {
       if jumprelease && heldtime <= room_speed / 2 { ///hold time check
          jumpstate = "lightjump"
          vspd = jumpheight;
-         audio_play_sound(ajump, 5, false);
+         audio_emitter_pitch(psfx, random_range(0.9, 1));
+         audio_emitter_gain(psfx, 0.1);
+         audio_play_sound_on(psfx, ajump, false, 6);
          
          ///create dust
          repeat (irandom_range(4, 7)) {
@@ -161,6 +165,13 @@ if !place_meeting(x, y + 1, osolidpar) {
 }
 
 if hspd != 0 {heldtime = 0;}
+
+///landing sound
+if place_meeting (x, y + vspd + 1, osolidpar) && vspd > 0 {
+    audio_emitter_pitch (psfx, random_range (0.8, 1.2));
+    audio_emitter_gain (psfx, 1);
+    audio_play_sound_on (psfx, astep, false, 6);
+}
 
 ///move
 move(osolidpar);

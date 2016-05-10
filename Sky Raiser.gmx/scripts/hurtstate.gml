@@ -7,6 +7,8 @@ if alarm[HURT] <= 0 {
    image_blend = c_white;
    state = movestate;
 }
+
+///death
 if oplayerstats.hp <=0 {
    oplayerstats.hp = 0;
    with oplayer {
@@ -14,4 +16,6 @@ if oplayerstats.hp <=0 {
    }
    game_restart();
 }
+
+///move
 move(osolidpar);

@@ -44,11 +44,6 @@ image_index = 0;
 image_speed = 0.1;
 lightjump = 0;
 
-///knockback / dmgboosting
-hknock = 0;
-vknock = 0;
-
-
 //initialise state
 state = movestate;
 
@@ -56,6 +51,9 @@ state = movestate;
 if !instance_exists(ocam){
    instance_create(x, y, ocam);
 }
+
+///create audio emitter
+psfx = audio_emitter_create();
 </string>
           </argument>
         </arguments>
@@ -177,11 +175,13 @@ with other {instance_destroy();}
           <argument>
             <kind>1</kind>
             <string>///collide with enemy
+
+///kill enemy
 if state = lightgroundattack {
    with other {
         instance_destroy()
    }
-}else{
+}else{ ///hurt player
       if jumpstate != "heavyjump" &amp;&amp; state != hurtstate ||
       jumpstate = "heavyjump" &amp;&amp; vspd == 0 {
          vspd = -12;
