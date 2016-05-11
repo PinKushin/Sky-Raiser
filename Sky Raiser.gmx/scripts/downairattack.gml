@@ -1,5 +1,5 @@
 ////downairattack
-
+jumpstate = "lightjump";
 hspd = 0;
 grav(pgrav);
 
