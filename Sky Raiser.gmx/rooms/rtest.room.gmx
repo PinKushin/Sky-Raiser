@@ -66,14 +66,16 @@
     <instance objName="osolidpar" x="332" y="727" name="inst_FEF63744" locked="0" code="" scaleX="5.28000020980835" scaleY="0.903225779533386" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="350" y="173" name="inst_238E2B45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="201" y="279" name="inst_AA9DC271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osoul" x="426" y="186" name="inst_D33D5B9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="osoul" x="417" y="186" name="inst_D33D5B9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="336" y="85" name="inst_929FF1D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="400" y="85" name="inst_CB5A2B64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="432" y="85" name="inst_384FB11B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="464" y="85" name="inst_FB7D4626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="368" y="85" name="inst_2866BC4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="429" y="103" name="inst_203F16BC" locked="0" code="" scaleX="1.05999994277954" scaleY="4.19000005722046" colour="4294967295" rotation="0"/>
-    <instance objName="oworm" x="311" y="291" name="inst_0A096A86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oworm" x="258" y="307" name="inst_FF4E18E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oworm" x="596" y="55" name="inst_05727593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oworm" x="924" y="208" name="inst_A0541D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

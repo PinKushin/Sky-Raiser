@@ -1,7 +1,6 @@
 ///movestate()
 var hj = jumpheight * 1.5;
 
-
 image_blend = c_white;
 
 ///horizontal movement
@@ -33,16 +32,13 @@ if !disablehormov {
 if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
    state = sprintstate;
 }else{
-      oplayerstats.stamina += 1;
-      if oplayerstats.stamina > oplayerstats.maxstamina {
-         oplayerstats.stamina = oplayerstats.maxstamina;
-      } 
+      regenstamina();
 }
 
 ///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
    
-   grav(0.5)
+   grav(pgrav)
    if disablehormov {script_execute(enablehormov)}
    heldtime = 0;
    
@@ -81,6 +77,11 @@ if !place_meeting(x, y + 1, osolidpar) {
         }         
    }
    
+   ///down attack
+   if action {
+      state = downairattack;
+   }
+   
    if hspd !=0 {
       image_xscale = sign(hspd);
    }
@@ -91,7 +92,8 @@ if !place_meeting(x, y + 1, osolidpar) {
    }
    
    ///fly
-   if jump {
+   if jump && oplayerstats.stamina >= jumpcost {
+      oplayerstats.stamina -= jumpcost;
       prevhspd = hspddir * hspd; //make positive
       state = flystate;
    }

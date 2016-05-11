@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///initialise player
 spd = 180 / room_speed;
-prevhspd = 0 
+prevhspd = 0;
 acc =  40 / room_speed;
 hspd = 0;
 vspd = 0;
@@ -36,8 +36,11 @@ jumpheight = -8;
 hasjumped = false;
 heldtime = 0;
 disablehormov = 0; //called when in needed to disable horizontalmovement speed
-jumpstate = "lightjump"
-heavyjumprotations = 0 //used to slow speed of rotation down as the player does more rotations, neat idea
+jumpstate = "lightjump";
+heavyjumprotations = 0; //used to slow speed of rotation down as the player does more rotations, neat idea
+jumpcost = 2;
+pgrav = 0.5;
+vultime = room_speed;
 
 //sprite animation
 image_index = 0;
@@ -177,7 +180,11 @@ with other {instance_destroy();}
             <string>///collide with enemy
 
 ///kill enemy
-if state = lightgroundattack {
+if state = lightgroundattack || state = downairattack {
+   if state = downairattack {
+      vspd = -12;
+   }
+   
    with other {
         instance_destroy()
    }

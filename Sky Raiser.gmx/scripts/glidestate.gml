@@ -1,6 +1,8 @@
 ///glidestate()
-
 vspd = 2;
+
+regenstamina()
+
 ///horizontal movement
 if right || left {
    hspd = hspddir * spd;
@@ -12,8 +14,14 @@ if right || left {
 }
 
 ///go to fly state
-if jump {
+if jump && oplayerstats.stamina >= jumpcost {
+   oplayerstats.stamina -= jumpcost;
    state = flystate;
+}
+
+///down air attack
+if action {
+      state = downairattack;
 }
 
 ///on ground

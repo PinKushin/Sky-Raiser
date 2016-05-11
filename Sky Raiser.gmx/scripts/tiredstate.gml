@@ -1,9 +1,14 @@
 ///tiredstate
+hspd = 0;
+
 if alarm [TIRED] <= 0 {
-   alarm[TIRED] = room_speed;
+   state = movestate;
 }
 
+grav (pgrav)
 ///control sprite
 spriteanimate(splayeridle, 0.1);
+
+move(osolidpar);
 
 

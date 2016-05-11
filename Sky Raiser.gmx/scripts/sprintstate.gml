@@ -6,7 +6,7 @@ if hspd < -(spd * 1.5) {hspd = -(spd * 1.4)}
 
 ///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
-   grav(.1);
+   grav(pgrav);
    
    ///control jump sprite
    sprite_index = splayerjump;
@@ -48,6 +48,7 @@ if !sprint {state = movestate;}
 ///stamina regen
 if oplayerstats.stamina <= 0 {
    oplayerstats.stamina = 0
+   alarm[TIRED] = vultime;
    state = tiredstate;
 }
 

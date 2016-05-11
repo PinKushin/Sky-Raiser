@@ -22,6 +22,7 @@
       <sprite>sprites\splayerwalk</sprite>
       <sprite>sprites\splayerlightgroundattack</sprite>
       <sprite>sprites\splayerfly</sprite>
+      <sprite>sprites\splayerdownairattack</sprite>
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
@@ -56,13 +57,18 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="player states">
-      <script>scripts\movestate.gml</script>
-      <script>scripts\sprintstate.gml</script>
-      <script>scripts\flystate.gml</script>
-      <script>scripts\glidestate.gml</script>
-      <script>scripts\tiredstate.gml</script>
-      <script>scripts\lightgroundattack.gml</script>
-      <script>scripts\hurtstate.gml</script>
+      <scripts name="movement">
+        <script>scripts\movestate.gml</script>
+        <script>scripts\sprintstate.gml</script>
+        <script>scripts\flystate.gml</script>
+        <script>scripts\glidestate.gml</script>
+        <script>scripts\tiredstate.gml</script>
+        <script>scripts\hurtstate.gml</script>
+      </scripts>
+      <scripts name="attacks">
+        <script>scripts\lightgroundattack.gml</script>
+        <script>scripts\downairattack.gml</script>
+      </scripts>
     </scripts>
     <scripts name="helper">
       <script>scripts\move.gml</script>
@@ -72,6 +78,7 @@
         <script>scripts\grounded.gml</script>
         <script>scripts\getinput.gml</script>
         <script>scripts\enablehormov.gml</script>
+        <script>scripts\regenstamina.gml</script>
       </scripts>
       <script>scripts\codesnippet.gml</script>
     </scripts>
