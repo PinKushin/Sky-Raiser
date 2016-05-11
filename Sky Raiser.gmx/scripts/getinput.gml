@@ -4,6 +4,12 @@
 right = keyboard_check(ord ("D"));
 left = keyboard_check(ord ("A"));
 down = keyboard_check(ord ("S"));
+if disablehormov {
+   downheld = noone;
+}
+else{
+   downheld = keyboard_check(ord ("S"));
+}
 up = keyboard_check(ord("W"));
 jump = keyboard_check_pressed(vk_space);
 

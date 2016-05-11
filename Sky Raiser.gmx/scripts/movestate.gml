@@ -43,6 +43,7 @@ if !place_meeting(x, y + 1, osolidpar) {
    heldtime = 0;
    
    ///control jump sprite
+   if jumpstate != "heavyjump" {state = glidestate}
    if jumpstate == "lightjump" {
        sprite_index = splayerjump;
        image_speed = 0;

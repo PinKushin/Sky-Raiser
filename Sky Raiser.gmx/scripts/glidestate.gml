@@ -18,17 +18,21 @@ if jump && oplayerstats.stamina >= jumpcost {
    oplayerstats.stamina -= jumpcost;
    state = flystate;
 }
+else if jumpheld && !down {state = flystate;}
+
 
 ///down air attack
 if action {
       state = downairattack;
 }
+///transition to fall if no buttons are held
+if !jumpheld and !down {state = movestate;}
 
 ///on ground
 grounded();
 
 ///control sprite
-spriteanimate(splayerwalk, 0.3);
+spriteanimate(splayerglide, 0);
 
 ///move
 move(osolidpar);

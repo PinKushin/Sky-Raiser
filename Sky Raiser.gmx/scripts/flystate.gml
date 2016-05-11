@@ -1,7 +1,7 @@
 ///flystate()
 jumpstate = "lightjump"; ///bug fix
 ///control sprite
-spriteanimate(splayerfly, 0.3);
+spriteanimate(splayerfly, 0.75);
 
 ///vertical movement previous code was vspd = -2;
 
@@ -10,10 +10,11 @@ if image_index >= 0 && image_index < 1 {
    vspd = -4;
    ///consume stamina
    oplayerstats.stamina -= 1;
-}else if image_index >= 1 && image_index < 2 {
-      vspd = 0;
-}else if image_index >=2 && image_index != 0 {
-      vspd = 1;
+}else if image_index >= 0 && image_index < 5 {
+      vspd += 2
+}else if image_index >=5 && image_index != 0 {
+      grav(0)
+      vspd = - 5.5;
 }
 
 ///horizontal movement
