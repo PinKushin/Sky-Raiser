@@ -1,4 +1,6 @@
 ////downairattack
+statetext = "down air attack";
+
 jumpstate = "lightjump";
 hspd = 0;
 

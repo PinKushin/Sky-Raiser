@@ -2,6 +2,8 @@
 var wallatright = position_meeting (bbox_right + 1, y, osolidpar)
 var ledgeatright = !position_meeting (bbox_right + 1, bbox_bottom + 1, osolidpar);
 
+statetext = "move right";
+
 if wallatright || ledgeatright {
     state = moveleft;
 }
@@ -10,5 +12,5 @@ if wallatright || ledgeatright {
 image_xscale = 1;
 
 ///move the snake
-x += 1;
+x += spd;
 

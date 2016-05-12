@@ -1,4 +1,6 @@
 ///glidestate()
+statetext = "glide state";
+
 vspd = 2;
 
 regenstamina();

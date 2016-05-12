@@ -1,4 +1,6 @@
 ///tiredstate
+statetext = "tired state";
+
 hspd = 0;
 
 if alarm [TIRED] <= 0 {

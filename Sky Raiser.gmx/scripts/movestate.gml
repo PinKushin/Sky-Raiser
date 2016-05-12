@@ -1,6 +1,8 @@
 ///movestate()
 var hj = jumpheight * 1.5;
 
+statetext = "move state";
+
 image_blend = c_white;
 
 ///horizontal movement
@@ -73,7 +75,6 @@ if !place_meeting(x, y + 1, osolidpar) {
              vspd = hj + 15;
         }
         else if heavyjumprotations == 4 {
-             //jumpstate = "lightjump";
              state = glidestate;
         }         
    }
@@ -159,6 +160,15 @@ if !place_meeting(x, y + 1, osolidpar) {
          spriteanimate(splayeridle, 0.1);
       }else if !jumpheld && !action {
             spriteanimate(splayerwalk, 0.2);
+      }
+      
+      if jumpheld {
+         if hspd != 0 {
+            sprite_index = splayerwalk;
+            image_speed = 0.2;
+         }else if hspd == 0 {
+               sprite_index = splayeridle;
+         }
       }
       
       ///moonwalk fix

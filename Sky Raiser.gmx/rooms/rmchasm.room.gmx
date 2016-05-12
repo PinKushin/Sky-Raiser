@@ -52,9 +52,9 @@
   </views>
   <instances>
     <instance objName="osolidpar" x="120" y="580" name="inst_37483A78" locked="0" code="" scaleX="12.4375" scaleY="0.875" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="505" y="242" name="inst_AD2101A8" locked="0" code="" scaleX="2.46875" scaleY="1.09677422046661" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="85" y="245" name="inst_33750E42" locked="0" code="" scaleX="1.48387098312378" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="508" y="246" name="inst_AD2101A8" locked="0" code="" scaleX="2.84375" scaleY="11.3100004196167" colour="4294967295" rotation="0"/>
     <instance objName="oplayer" x="172" y="157" name="inst_26868F04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="osolidpar" x="92" y="258" name="inst_011797DC" locked="0" code="" scaleX="1.02999997138977" scaleY="10.84375" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

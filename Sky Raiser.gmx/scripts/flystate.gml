@@ -1,4 +1,6 @@
 ///flystate()
+statetext = "fly state";
+
 jumpstate = "lightjump"; ///bug fix
 ///control sprite
 spriteanimate(splayerfly, 0.75);

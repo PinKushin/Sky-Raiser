@@ -1,4 +1,6 @@
 ///hurtstate()
+statetext = "hurt state";
+
 image_blend = c_red;
 jumpstate = "lightjump"
 grav(pgrav);

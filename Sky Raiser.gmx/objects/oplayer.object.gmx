@@ -48,6 +48,7 @@ image_speed = 0.1;
 lightjump = 0;
 
 //initialise state
+statetext = "movestate";
 state = movestate;
 
 ///create camera
@@ -186,7 +187,7 @@ if state = lightgroundattack || state = downairattack {
    }
    
    with other {
-        instance_destroy()
+        hp -= 1;
    }
 }else{ ///hurt player
       if jumpstate != "heavyjump" &amp;&amp; state != hurtstate ||
@@ -275,6 +276,12 @@ if y &gt; room_height || x &gt; room_width || x &lt; 0 {
             <kind>1</kind>
             <string>///player debug draw
 draw_self();
+
+if DEBUG == true {
+   draw_set_halign(fa_center);
+   draw_set_valign(fa_middle);
+   draw_text(x, y - 32, statetext);
+}
 </string>
           </argument>
         </arguments>

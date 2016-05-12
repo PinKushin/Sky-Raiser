@@ -27,6 +27,10 @@
     </sprites>
     <sprites name="enemys">
       <sprite>sprites\ssnake</sprite>
+      <sprites name="bat">
+        <sprite>sprites\sbatidle</sprite>
+        <sprite>sprites\sbatfly</sprite>
+      </sprites>
     </sprites>
     <sprites name="level">
       <sprite>sprites\ssolid</sprite>
@@ -72,21 +76,27 @@
       </scripts>
     </scripts>
     <scripts name="helper">
-      <script>scripts\move.gml</script>
+      <script>scripts\codesnippet.gml</script>
+      <script>scripts\death.gml</script>
       <script>scripts\grav.gml</script>
-      <script>scripts\spriteanimate.gml</script>
+      <script>scripts\move.gml</script>
       <scripts name="player">
         <script>scripts\grounded.gml</script>
         <script>scripts\getinput.gml</script>
         <script>scripts\enablehormov.gml</script>
         <script>scripts\regenstamina.gml</script>
       </scripts>
-      <script>scripts\codesnippet.gml</script>
+      <script>scripts\spriteanimate.gml</script>
     </scripts>
     <scripts name="enemy states">
       <scripts name="worm">
         <script>scripts\moveleft.gml</script>
         <script>scripts\moveright.gml</script>
+      </scripts>
+      <scripts name="bat">
+        <script>scripts\batidle.gml</script>
+        <script>scripts\batchase.gml</script>
+        <script>scripts\batattack.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -109,6 +119,7 @@
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>
+      <object>objects\obat</object>
     </objects>
     <objects name="particles">
       <object>objects\ojumpdust</object>

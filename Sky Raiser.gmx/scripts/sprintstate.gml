@@ -1,4 +1,5 @@
 ///sprintstate()
+statetext = "sprint state";
 
 hspd += hspddir * acc;
 if hspd > (spd * 1.5) {hspd = spd * 1.4}
