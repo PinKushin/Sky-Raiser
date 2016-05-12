@@ -11,9 +11,8 @@ if image_index >= 0 && image_index < 1 {
    ///consume stamina
    oplayerstats.stamina -= 1;
 }else if image_index >= 0 && image_index < 5 {
-      vspd += 2
+      vspd = 2
 }else if image_index >=5 && image_index != 0 {
-      grav(0)
       vspd = - 5.5;
 }
 
@@ -48,7 +47,8 @@ if action {
 
 ///change states
 if jumprelease {state = movestate;}
-if jumpheld && down {state = glidestate;}
+if down {state = glidestate;}
 
 ///move
+grav(0);
 move(osolidpar);

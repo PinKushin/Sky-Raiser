@@ -1,7 +1,7 @@
 ///glidestate()
 vspd = 2;
 
-regenstamina()
+regenstamina();
 
 ///horizontal movement
 if right || left {
@@ -26,7 +26,7 @@ if action {
       state = downairattack;
 }
 ///transition to fall if no buttons are held
-if !jumpheld and !down {state = movestate;}
+if !jumpheld && !down && jumpstate != "heavyjump"  {state = movestate;}
 
 ///on ground
 grounded();

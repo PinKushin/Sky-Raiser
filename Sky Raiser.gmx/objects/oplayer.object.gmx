@@ -190,7 +190,7 @@ if state = lightgroundattack || state = downairattack {
    }
 }else{ ///hurt player
       if jumpstate != "heavyjump" &amp;&amp; state != hurtstate ||
-      jumpstate = "heavyjump" &amp;&amp; vspd == 0 {
+      jumpstate = "heavyjump" &amp;&amp; place_meeting(x, y + 1, osolidpar) {
          vspd = -12;
          hspd = sign(x - other.x) * 2;
          alarm[HURT] = room_speed;

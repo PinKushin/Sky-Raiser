@@ -44,7 +44,7 @@ view_vborder[0] = 288;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -63,10 +63,6 @@ view_vborder[0] = 288;
             <kind>1</kind>
             <string>///follow the player
 if instance_exists (oplayer) {
-    if oplayer.state = flystate {
-    hspd = oplayer.hspd;
-    vspd = oplayer.vspd;
-    }
     hspd = (oplayer.x - x) * 0.1;
     vspd = (oplayer.y - y) * 0.06;
     if oplayer.vspd &gt; 8 &amp;&amp; oplayer.state != hurtstate {
