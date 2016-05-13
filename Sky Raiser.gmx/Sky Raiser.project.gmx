@@ -87,6 +87,7 @@
         <script>scripts\regenstamina.gml</script>
       </scripts>
       <script>scripts\spriteanimate.gml</script>
+      <script>scripts\lineofsight.gml</script>
     </scripts>
     <scripts name="enemy states">
       <scripts name="worm">

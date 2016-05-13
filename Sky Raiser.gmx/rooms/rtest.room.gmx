@@ -62,18 +62,18 @@
     <instance objName="osolidpar" x="469" y="511" name="inst_6683F2BE" locked="0" code="" scaleX="4.90322589874268" scaleY="0.645161271095276" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="143" y="605" name="inst_15CDDAF8" locked="0" code="" scaleX="4.90625" scaleY="0.5625" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="971" y="96" name="inst_69BEA379" locked="0" code="" scaleX="1.70967745780945" scaleY="0.612903237342834" colour="4294967295" rotation="0"/>
-    <instance objName="oplayer" x="307" y="194" name="inst_134ED678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oplayer" x="308" y="203" name="inst_134ED678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="332" y="727" name="inst_FEF63744" locked="0" code="" scaleX="5.28000020980835" scaleY="0.903225779533386" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="350" y="173" name="inst_238E2B45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="201" y="279" name="inst_AA9DC271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="417" y="186" name="inst_D33D5B9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="osolidpar" x="429" y="103" name="inst_203F16BC" locked="0" code="" scaleX="1.05999994277954" scaleY="4.19000005722046" colour="4294967295" rotation="0"/>
     <instance objName="oworm" x="258" y="307" name="inst_FF4E18E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oworm" x="596" y="55" name="inst_05727593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oworm" x="924" y="208" name="inst_A0541D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="339" y="91" name="inst_96F37158" locked="0" code="" scaleX="4.94000005722046" scaleY="0.8125" colour="4294967295" rotation="0"/>
     <instance objName="obat" x="621" y="111" name="inst_FEE9D594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obat" x="891" y="270" name="inst_A2D2CCE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obat" x="487" y="133" name="inst_FF4C2A2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

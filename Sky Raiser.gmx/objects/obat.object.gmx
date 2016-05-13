@@ -28,13 +28,17 @@
             <string>///initialise bat
 image_speed = 0;
 sightrange = 96;
-attackrange = 24;
-spd = 120 / room_speed;
+attackrange = 64;
+spd = 160 / room_speed;
 hp = 1;
 hspd = 0;
 vspd = 0;
 
-///startin state
+startx = x
+starty = y
+
+
+///starting state
 statetext = "idle";
 state = batidle;
 
@@ -93,7 +97,10 @@ if DEBUG = true {
     draw_set_alpha(.1);
     draw_circle_color(x, y, sightrange, c_red, c_red, false);
     draw_set_alpha(1);
-    draw_text(x, y, statetext)
+    draw_text(x, y, statetext);
+    draw_text(x, y - 32, hspd);
+    draw_text(x, y - 16, vspd);
+    //draw_text(x, y + 16, dir);
 }
 </string>
           </argument>

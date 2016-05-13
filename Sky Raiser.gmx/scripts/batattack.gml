@@ -5,18 +5,17 @@ if instance_exists(oplayer) {
     
     statetext = "attack"
     
-    if dis > attackrange {
+    if dis > attackrange || lineofsight(oplayer) == false  {
        state = batchase;
     }else {
           ///attack
-          if alarm[ATTACK] <= 0 {
-             hspd = lengthdir_x(spd * 2, dir);
-             vspd = lengthdir_y(spd * 2, dir);
+          hspd = lengthdir_x(spd * 2, dir);
+          vspd = lengthdir_y(spd * 2, dir);
+          
+          if oplayer.state == hurtstate {
              alarm[ATTACK] = room_speed;
-          }else {
-                hspd = 0;
-                vspd = 0;
-          }
+             state = batchase;
+          }      
     }
 }
 
