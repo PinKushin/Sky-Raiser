@@ -44,7 +44,8 @@ if oplayerstats.stamina <= 0 {
 
 ///down air attack
 if action {
-      state = downairattack;
+   prevhspd = hspd;
+   state = downairattack;   
 }
 
 ///change states

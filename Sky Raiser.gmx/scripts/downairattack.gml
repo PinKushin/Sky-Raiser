@@ -2,7 +2,7 @@
 statetext = "down air attack";
 
 jumpstate = "lightjump";
-hspd = 0;
+hspd = prevhspd;
 
 grav(pgrav);
 

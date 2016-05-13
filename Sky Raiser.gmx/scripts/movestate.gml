@@ -81,6 +81,7 @@ if !place_meeting(x, y + 1, osolidpar) {
    
    ///down attack
    if action {
+      prevhspd = hspd;
       state = downairattack;
    }
    
