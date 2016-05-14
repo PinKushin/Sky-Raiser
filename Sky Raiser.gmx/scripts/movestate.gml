@@ -33,8 +33,8 @@ if !disablehormov {
 }
 
 ///sprint
-if sprint && oplayerstats.stamina >= 2 && place_meeting (x, y + 1, osolidpar) {
-   state = sprintstate;
+if sprint  && place_meeting (x, y + 1, osolidpar) {
+   state = birdsprintstate;
 }else{
       regenstamina();
 }

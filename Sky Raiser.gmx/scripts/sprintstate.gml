@@ -7,13 +7,11 @@ if hspd < -(spd * 1.5) {hspd = -(spd * 1.4)}
 
 ///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
-   grav(pgrav);
    
    ///control jump sprite
-   sprite_index = splayerjump;
+   sprite_index = splayerglide;
    image_speed = 0;
    image_index = (vspd > 0);
-   
    if jump { 
       prevspd = hspddir * hspd; //make positive
       state = flystate;
@@ -24,7 +22,7 @@ if !place_meeting(x, y + 1, osolidpar) {
       vspd = (jumpheight / 2);
    }
 }else{ ///player on the ground
-      vspd = 0;
+      
       ///jump
       if jump {
          vspd = jumpheight;
@@ -38,7 +36,7 @@ if !place_meeting(x, y + 1, osolidpar) {
       if hspd == 0 {
          spriteanimate(splayeridle, 0.1);
       }else{
-            spriteanimate(splayerwalk, 0.6);
+            spriteanimate(splayerglide, 1);
             oplayerstats.stamina -= .5;
       }
 }

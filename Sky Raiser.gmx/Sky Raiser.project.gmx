@@ -65,6 +65,7 @@
       <scripts name="movement">
         <script>scripts\movestate.gml</script>
         <script>scripts\sprintstate.gml</script>
+        <script>scripts\birdsprintstate.gml</script>
         <script>scripts\flystate.gml</script>
         <script>scripts\glidestate.gml</script>
         <script>scripts\tiredstate.gml</script>
@@ -80,6 +81,7 @@
       <script>scripts\death.gml</script>
       <script>scripts\grav.gml</script>
       <script>scripts\move.gml</script>
+      <script>scripts\horsprintmove.gml</script>
       <scripts name="player">
         <script>scripts\grounded.gml</script>
         <script>scripts\getinput.gml</script>
