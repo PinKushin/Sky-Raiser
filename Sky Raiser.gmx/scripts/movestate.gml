@@ -5,6 +5,8 @@ statetext = "move state";
 
 image_blend = c_white;
 
+
+
 ///horizontal movement
 if !disablehormov {
    if right || left {
