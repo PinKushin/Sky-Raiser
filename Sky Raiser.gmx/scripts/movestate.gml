@@ -160,7 +160,7 @@ if !place_meeting(x, y + 1, osolidpar) {
 
       ///control walking sprite
       if hspd == 0 && !jumpheld && !action {
-         spriteanimate(splayeridle, 0.1);
+         spriteanimate(splayeridle, 1);
       }else if !jumpheld && !action {
             spriteanimate(splayerwalk, 0.2);
       }

@@ -43,6 +43,7 @@
     <sprites name="player">
       <sprite>sprites\splayerheavyjump</sprite>
       <sprite>sprites\splayeridle</sprite>
+      <sprite>sprites\splayerlongidle</sprite>
       <sprite>sprites\splayerjump</sprite>
       <sprite>sprites\splayermask</sprite>
       <sprite>sprites\splayerwalk</sprite>
