@@ -5,8 +5,6 @@ statetext = "move state";
 
 image_blend = c_white;
 
-
-
 ///horizontal movement
 if !disablehormov {
    if right || left {
@@ -34,7 +32,7 @@ if !disablehormov {
 
 ///sprint
 if sprint  && place_meeting (x, y + 1, osolidpar) {
-   state = birdsprintstate;
+   state = sprintstate;
 }else{
       regenstamina();
 }
@@ -57,7 +55,7 @@ if !place_meeting(x, y + 1, osolidpar) {
         if image_index > image_number - 1 { 
            //used to slow speed of rotation down as the player does more rotations, neat idea
            image_index = 7;
-           heavyjumprotations ++;
+           heavyjumprotations++;
         }
         
         if heavyjumprotations == 0 {

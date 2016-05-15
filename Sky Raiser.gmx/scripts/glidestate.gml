@@ -28,7 +28,7 @@ if action {
       state = downairattack;
 }
 ///transition to fall if no buttons are held
-if !jumpheld && !down && jumpstate != "heavyjump"  {state = movestate;}
+if !jumpheld && !down && jumpstate != "heavyjump" && !sprint  {state = movestate;}
 
 ///on ground
 grounded();

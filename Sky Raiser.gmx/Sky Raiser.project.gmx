@@ -62,6 +62,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\codesnippet.gml</script>
     <scripts name="enemy states">
       <scripts name="worm">
         <script>scripts\moveleft.gml</script>
@@ -74,7 +75,6 @@
       </scripts>
     </scripts>
     <scripts name="helper">
-      <script>scripts\codesnippet.gml</script>
       <script>scripts\death.gml</script>
       <script>scripts\grav.gml</script>
       <script>scripts\lineofsight.gml</script>

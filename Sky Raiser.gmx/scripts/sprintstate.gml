@@ -1,17 +1,19 @@
 ///sprintstate()
 statetext = "sprint state";
-
-hspd += hspddir * acc;
-if hspd > (spd * 1.5) {hspd = spd * 1.4}
-if hspd < -(spd * 1.5) {hspd = -(spd * 1.4)}
+sprite_index = splayerglide;
+if left || right {
+   hspd += hspddir * acc;
+   if hspd > (spd * 1.5) {hspd = spd * 1.4}
+   if hspd < -(spd * 1.5) {hspd = -(spd * 1.4)}
+}else {
+      hspd = 0;
+}
 
 ///player is in the air
 if !place_meeting(x, y + 1, osolidpar) {
-   
+   grav(pgrav)
    ///control jump sprite
-   sprite_index = splayerglide;
-   image_speed = 0;
-   image_index = (vspd > 0);
+   state = glidestate;
    if jump { 
       prevspd = hspddir * hspd; //make positive
       state = flystate;
@@ -25,6 +27,7 @@ if !place_meeting(x, y + 1, osolidpar) {
       
       ///jump
       if jump {
+         jumpstate = "lightjump"
          vspd = jumpheight;
          audio_play_sound(ajump, 5, false);
          repeat (irandom_range(4, 7)) {
@@ -34,9 +37,10 @@ if !place_meeting(x, y + 1, osolidpar) {
       
       ///control walking sprite
       if hspd == 0 {
-         spriteanimate(splayeridle, 0.1);
-      }else{
-            spriteanimate(splayerglide, 1);
+         image_index = 0;
+      }else {
+            image_index = 1;
+            image_xscale = sign(hspd);
             oplayerstats.stamina -= .5;
       }
 }
