@@ -28,6 +28,7 @@
             <string>statetext = "running"
 speed = 2;
 sightrange = 96;
+hp = 1;
 // This next line fixes a bug that causes it to not work if it starts on a certain wall.
 if(place_meeting(x - 1,y,osolidpar) = false) { direction = 180; }
 </string>
@@ -103,6 +104,7 @@ else if(place_meeting(x + lengthdir_x(speed,direction),y + lengthdir_y(speed,dir
     // Make full contact with the wall
     move_contact_solid(direction - 90,speed);
 }
+
 image_angle = direction;
 
 ///attack
@@ -115,13 +117,14 @@ if lineofsight(oplayer) &amp;&amp; dis &lt;= sightrange {
    if alarm[0] &lt;=0 {
       var myspit = instance_create(x, y, ospit);
       myspit.direction = dir;
-      alarm[0] = room_speed;
+      alarm[0] = room_speed / 2;
    }
    
 }else{
       speed = 2;
       image_index = 0;
 }
+death();
 </string>
           </argument>
         </arguments>
