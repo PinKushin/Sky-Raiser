@@ -68,6 +68,9 @@
     <instance objName="osoul" x="201" y="279" name="inst_AA9DC271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osoul" x="417" y="186" name="inst_D33D5B9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="osolidpar" x="339" y="91" name="inst_96F37158" locked="0" code="" scaleX="4.94000005722046" scaleY="0.8125" colour="4294967295" rotation="0"/>
+    <instance objName="ospitter" x="200" y="307" name="inst_0BD9EC0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ospitter" x="575" y="111" name="inst_B6A33EBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="ospitter" x="418" y="357" name="inst_80EEF2A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

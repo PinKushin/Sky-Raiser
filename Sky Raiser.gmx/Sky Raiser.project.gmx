@@ -20,6 +20,7 @@
         <sprite>sprites\sbatidle</sprite>
         <sprite>sprites\sbatfly</sprite>
       </sprites>
+      <sprite>sprites\sspitter</sprite>
     </sprites>
     <sprites name="helpers">
       <sprite>sprites\smusic</sprite>
@@ -39,6 +40,7 @@
     <sprites name="particles">
       <sprite>sprites\sdust</sprite>
       <sprite>sprites\sdustwalk</sprite>
+      <sprite>sprites\senemyspit</sprite>
     </sprites>
     <sprites name="player">
       <sprite>sprites\splayerheavyjump</sprite>
@@ -108,6 +110,7 @@
     <objects name="enemys">
       <object>objects\oworm</object>
       <object>objects\obat</object>
+      <object>objects\ospitter</object>
     </objects>
     <objects name="game">
       <object>objects\omusic</object>
@@ -127,6 +130,7 @@
     <objects name="particles">
       <object>objects\ojumpdust</object>
       <object>objects\owalkdust</object>
+      <object>objects\ospit</object>
     </objects>
     <objects name="player">
       <object>objects\oplayer</object>
