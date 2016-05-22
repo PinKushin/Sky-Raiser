@@ -1,7 +1,7 @@
 ///movestate()
 var hj = jumpheight * 1.5;
 
-statetext = "move state";
+//statetext = "move state";
 
 image_blend = c_white;
 
@@ -45,39 +45,9 @@ if !place_meeting(x, y + 1, osolidpar) {
    heldtime = 0;
    
    ///control jump sprite
-   if jumpstate == "lightjump" {
-       sprite_index = splayerjump;
-       image_speed = 0;
-       image_index = (vspd > 0);
-   }else if jumpstate == "heavyjump" {
-        sprite_index = splayerheavyjump;
-        
-        if image_index > image_number - 1 { 
-           //used to slow speed of rotation down as the player does more rotations, neat idea
-           image_index = 7;
-           heavyjumprotations++;
-        }
-        
-        if heavyjumprotations == 0 {
-           image_speed = 1;
-           vspd = hj;
-        }
-        else if heavyjumprotations == 1 {
-            image_speed = 0.5;
-            vspd = hj + 10;
-        }
-        else if heavyjumprotations == 2 {
-             image_speed = 0.25; 
-             vspd = hj + 12;
-        }
-        else if heavyjumprotations == 3 {
-             image_speed = 0.125;
-             vspd = hj + 15;
-        }
-        else if heavyjumprotations == 4 {
-             state = glidestate;
-        }         
-   }
+   sprite_index = splayerjump;
+   image_speed = 0;
+   image_index = (vspd > 0);
    
    ///down attack
    if action {
@@ -102,17 +72,11 @@ if !place_meeting(x, y + 1, osolidpar) {
    }
    
 }else{ ///player on the ground
-      ///switch back to lightjump to fix falling animation
-      if heavyjumprotations > 1 {
-         jumpstate = "lightjump"
-         if heavyjumprotations != 0{ //so that the twirls aren't messed up
-            heavyjumprotations = 0
-         }
-      }
       ///set vspd
       vspd = 0;
       ///jump
       if jumprelease && heldtime <= room_speed / 2 { ///hold time check
+         statetext = "lightjump"
          jumpstate = "lightjump"
          vspd = jumpheight;
          audio_emitter_pitch(psfx, random_range(0.9, 1));
@@ -127,20 +91,13 @@ if !place_meeting(x, y + 1, osolidpar) {
             heldtime += 1;
             if heldtime >= room_speed / 2 { ///hold time check
                 ///animate the crouch
+                statetext = "heavyjump"
                 jumpstate = "heavyjump"
-                sprite_index = splayerheavyjump;
-                image_speed = 0.2;
                 disablehormov = 1;
-                
-                ///stop the crouch animation
-                if image_index >= 3 {
-                   image_index = 3;
-                   image_speed = 0;
-                } 
             }
       }else if jumprelease && hspd == 0 && heldtime >= room_speed / 2 { ///hold time check
             ///heavy jump
-            vspd = jumpheight * 1.5;
+            vspd = jumpheight * 2;
             
             ///create dust
             repeat (irandom_range(6, 10)) {

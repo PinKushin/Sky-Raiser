@@ -54,6 +54,8 @@
       <sprite>sprites\splayerglide</sprite>
       <sprite>sprites\splayerdownairattack</sprite>
     </sprites>
+    <sprite>sprites\sjumper</sprite>
+    <sprite>sprites\schaser</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bchasmconcept</background>
@@ -75,6 +77,16 @@
         <script>scripts\batchase.gml</script>
         <script>scripts\batattack.gml</script>
       </scripts>
+      <scripts name="chaser">
+        <script>scripts\chasermove.gml</script>
+      </scripts>
+      <scripts name="spitter">
+        <script>scripts\spittermove.gml</script>
+      </scripts>
+      <scripts name="jumper">
+        <script>scripts\jumperidle.gml</script>
+        <script>scripts\jumperjump.gml</script>
+      </scripts>
     </scripts>
     <scripts name="helper">
       <script>scripts\death.gml</script>
@@ -89,6 +101,8 @@
         <script>scripts\regenstamina.gml</script>
       </scripts>
       <script>scripts\spriteanimate.gml</script>
+      <script>scripts\horizontalmovebounce.gml</script>
+      <script>scripts\applyfriction.gml</script>
     </scripts>
     <scripts name="player states">
       <scripts name="movement">
@@ -111,6 +125,8 @@
       <object>objects\oworm</object>
       <object>objects\obat</object>
       <object>objects\ospitter</object>
+      <object>objects\ochaser</object>
+      <object>objects\ojumper</object>
     </objects>
     <objects name="game">
       <object>objects\omusic</object>
@@ -143,8 +159,9 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rmenu</room>
-    <room>rooms\rtest</room>
     <room>rooms\rmchasm</room>
+    <room>rooms\rtest2</room>
+    <room>rooms\rtest</room>
     <room>rooms\rcredits</room>
   </rooms>
   <help>
