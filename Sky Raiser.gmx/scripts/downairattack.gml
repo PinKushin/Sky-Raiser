@@ -1,8 +1,8 @@
 ////downairattack
 statetext = "down air attack";
 
-jumpstate = "lightjump";
 hspd = prevhspd;
+attacking = true;
 
 grav(pgrav);
 

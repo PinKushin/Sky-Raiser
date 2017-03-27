@@ -70,15 +70,16 @@ switch room {
             ///draw stats
             draw_text(64, 128, "Health: " + string(oplayerstats.hp));
             draw_text(64, 164, "Stamina: " + string(round(oplayerstats.stamina)));
-            draw_text(64, 196, "Souls: " +string(oplayerstats.souls));
+            draw_text(64, 196, "Souls: " + string(oplayerstats.souls));
             time += 1; ///add to timer
-            ///draw timer
+            ///draw timer 
+            ///try to create minute rollover later
             draw_text(view_wview[view_current] / 2, 64, "Time: " + string(floor(time / room_speed)));
        break;
 }
 
-if DEBUG == true {
-   draw_text(view_wview[view_current] / 2, view_hview[view_current] - 128, "FPS: " + string(floor(fps_real)));
+if global.fpsCounter == true {
+   draw_text(view_wview[view_current] / 2, 32, "FPS: " + string(floor(fps_real)));
 }
 </string>
           </argument>
@@ -107,31 +108,6 @@ if DEBUG = true{
    draw_self()
 }
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///restart ggame
-game_restart();
 
 </string>
           </argument>

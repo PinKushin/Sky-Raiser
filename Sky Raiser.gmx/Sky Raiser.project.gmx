@@ -83,7 +83,6 @@
       <scripts name="player">
         <script>scripts\grounded.gml</script>
         <script>scripts\getinput.gml</script>
-        <script>scripts\enablehormov.gml</script>
         <script>scripts\regenstamina.gml</script>
       </scripts>
       <script>scripts\spriteanimate.gml</script>
@@ -113,10 +112,11 @@
     <objects name="game">
       <object>objects\omusic</object>
       <object>objects\ocredits</object>
-      <object>objects\ofont</object>
+      <object>objects\ofonts</object>
       <object>objects\osoulcredits</object>
       <object>objects\omenu</object>
       <object>objects\ocam</object>
+      <object>objects\ogame</object>
     </objects>
     <objects name="enemys">
       <object>objects\oworm</object>
@@ -136,6 +136,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rmenu</room>
+    <room>rooms\rmovement</room>
     <room>rooms\rtest</room>
     <room>rooms\rmchasm</room>
     <room>rooms\rcredits</room>

@@ -26,29 +26,26 @@
           <argument>
             <kind>1</kind>
             <string>///initialise player
-spd = 180 / room_speed;
-prevhspd = 0;
-acc =  40 / room_speed;
+spd = 10800/ (room_speed * room_speed);
+mspd = 18000 / (room_speed * room_speed);
+acc =  720 / (room_speed * room_speed);
+decel = 360 / (room_speed * room_speed);
 hspd = 0;
 vspd = 0;
+prevhspd = 0;
 flycost = 5;
-jumpheight = -8;
-hasjumped = false;
-heldtime = 0;
-disablehormov = 0; //called when in needed to disable horizontalmovement speed
-jumpstate = "lightjump";
-heavyjumprotations = 0; //used to slow speed of rotation down as the player does more rotations, neat idea
+jumpheight = -20000 / (room_speed * room_speed);
 jumpcost = 2;
-pgrav = 0.5;
+pgrav = 1800 / (room_speed * room_speed);
 vultime = room_speed;
+attacking = false;
+
 
 //sprite animation
 image_index = 0;
 image_speed = 0.1;
-lightjump = 0;
 
 //initialise state
-statetext = "movestate";
 state = movestate;
 
 ///create camera
@@ -181,17 +178,18 @@ with other {instance_destroy();}
             <string>///collide with enemy
 
 ///kill enemy
-if state = lightgroundattack || state = downairattack {
-   if state = downairattack {
+if attacking == true {
+    
+    attacking = false;
+    if state = downairattack {
       vspd = -12;
-   }
+    }
    
-   with other {
+    with other {
         hp -= 1;
-   }
+    }
 }else{ ///hurt player
-      if jumpstate != "heavyjump" &amp;&amp; state != hurtstate ||
-      jumpstate = "heavyjump" &amp;&amp; place_meeting(x, y + 1, osolidpar) {
+      if state != hurtstate || place_meeting(x, y + 1, osolidpar) {
          vspd = -12;
          hspd = sign(x - other.x) * 2;
          alarm[HURT] = room_speed;
@@ -257,7 +255,7 @@ if y &gt; room_height || x &gt; room_width || x &lt; 0 {
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -275,12 +273,16 @@ if y &gt; room_height || x &gt; room_width || x &lt; 0 {
           <argument>
             <kind>1</kind>
             <string>///player debug draw
-draw_self();
-
 if DEBUG == true {
-   draw_set_halign(fa_center);
+   draw_set_halign(fa_left);
    draw_set_valign(fa_middle);
-   draw_text(x, y - 32, statetext);
+   draw_set_colour(c_yellow);
+   
+   draw_text(64, view_hview[view_current] - 128, "Player State: " + string(statetext));
+   draw_text(64, view_hview[view_current] - 96, "Player Speed: " + string(abs(hspd)));
+   
+   ///reset draw color
+   draw_set_colour(c_white);
 }
 </string>
           </argument>
